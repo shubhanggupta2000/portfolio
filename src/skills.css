@@ -1,0 +1,117 @@
+.skills {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 1rem 3rem;
+  padding-top: 2rem;
+  width: fit-content;
+}
+
+.title {
+  font-size: 70px;
+  justify-content: center;
+  display: flex;
+  font-style: italic;
+  padding-bottom: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.sh_box {
+  height: 35vh;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.skill_icons_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+  padding: 0px 10px;
+  height: 100%;
+}
+
+.skill_icons_section svg {
+  width: 55px;
+  margin: 15px;
+  margin-bottom: 35px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.skill_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.3s;
+  z-index: 99;
+}
+
+.skill_description {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(236, 236, 236);
+  opacity: 0;
+  z-index: 10000000000;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 80px;
+  font-size: 0.9em;
+  background-color: #0d140f;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.781);
+}
+
+.skill_description > * {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+.skill_item:hover {
+  transform: scale(1.1);
+}
+
+.skill_item:hover .skill_description {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .skill_icons_section {
+    padding: 5px;
+  }
+  .skill_icons_section svg {
+    margin: 10px;
+    width: 7vw;
+  }
+
+  .skill_description {
+    font-size: 2vw;
+    margin-top: 12vw;
+  }
+
+  .sh_box {
+    height: 25vh;
+    margin-bottom: 5px;
+  }
+}
