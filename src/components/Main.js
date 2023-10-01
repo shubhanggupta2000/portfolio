@@ -150,7 +150,10 @@ const Main = () => {
           <span>click here</span>
         </Center>
 
-        <Resume to="https://drive.google.com/file/d/1WFlmmWfYNDZI4NPsNh6iMA8D55NMhO90/view?usp=sharing" target="_blank">
+        <Resume
+          to="https://drive.google.com/file/d/1WFlmmWfYNDZI4NPsNh6iMA8D55NMhO90/view?usp=sharing"
+          target="_blank"
+        >
           <motion.h2
             initial={{
               y: -200,
@@ -163,7 +166,8 @@ const Main = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <BiSolidDownload size={24} style={{ verticalAlign: "middle" }} /> Resume
+            <BiSolidDownload size={24} style={{ verticalAlign: "middle" }} />{" "}
+            Resume
           </motion.h2>
         </Resume>
 

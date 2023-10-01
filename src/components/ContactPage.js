@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
-import styled, { useTheme } from "styled-components";
-import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
-import AnchorComponent from "../subComponents/Anchor";
 import BigTitle from "../subComponents/BigTitle";
-import { motion } from "framer-motion";
+import { lightTheme } from "./Themes";
+import AnchorComponent from "../subComponents/Anchor";
+import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
+
 import {
   Flex,
   Box,
@@ -28,268 +29,290 @@ import {
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import {
   BsGithub,
-  BsPerson,
-  BsInstagram,
   BsLinkedin,
-  BsTwitter,
+  BsPerson,
   BsFacebook,
+  BsInstagram,
 } from "react-icons/bs";
+import { FaSquareXTwitter, FaMedium, FaQuora } from "react-icons/fa6";
 
-const MainContainer = styled(motion.div)`
+const MainBox = styled.div`
+  background-color: ${(props) => props.theme.body};
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
   background-image: url(${img});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
 `;
-const Container = styled.div`
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
+
+const ContactForm = styled.div`
   width: 100%;
   height: auto;
-
   position: relative;
-  padding-bottom: 5rem;
-`;
-
-const Center = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10rem;
 `;
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
+const ContactFormContainer = styled.div`
+  background-color: transparent;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+  margin: 10rem;
+  padding: 3rem;
+`;
 
-    transition: {
-      staggerChildren: 0.5,
-      duration: 0.5,
-    },
-  },
-};
+const Container = styled.div`
+  background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  padding-bottom: 5rem;
+  maxW="container.xl"
+  mt={0}
+  centerContent
+  overflow="hidden"
+`;
 
 const ContactPage = () => {
-  const [numbers, setNumbers] = useState(0);
+  const socialMediaLinks = {
+    github: "https://github.com/shubhanggupta2000",
+    linkedin: "https://www.linkedin.com/in/shubhang-gupta-a081ab201/",
+    medium: "https://medium.com/@guptashubhang2000",
+    twitter: "https://twitter.com/ShubhangGupta13",
+    quora: "https://www.quora.com/profile/Shubhang-Gupta-31",
+    facebook: "https://www.facebook.com/shubhang.agarwal.71/",
+    instagram: "https://www.instagram.com/guptashubhang2000/",
+  };
 
-  useEffect(() => {
-    let num = (window.innerHeight - 70) / 30;
-    setNumbers(parseInt(num));
-  }, []);
-
-  const variants = {
-    hidden: { opacity: 0, x: 0, y: 20 },
-    enter: { opacity: 1, x: 0, y: 0 },
-    exit: { opacity: 0, x: -0, y: 20 },
+  const handleButtonClick = (platform) => {
+    const link = socialMediaLinks[platform];
+    window.open(link, "_blank");
   };
 
   return (
-    <MainContainer
-      variants={container}
-      initial="hidden"
-      animate="show"
-      exit={{
-        opacity: 0,
-        transition: { duration: 0.5 },
-      }}
-    >
-      <Container>
-        <LogoComponent />
-        <PowerButton />
-        <SocialIcons />
-        <AnchorComponent number={numbers} />
-        <Center>
-          <motion.div
-            initial="hidden"
-            animate="enter"
-            exit="exit"
-            variants={variants}
-            transition={{ duration: 0.4, type: "easeInOut" }}
-          >
-            <Container
-              maxW="container.xl"
-              mt={0}
-              centerContent
-              overflow="hidden"
-            >
-              <Flex>
-                <Box
-                  borderRadius="lg"
-                  m={{ sm: 4, md: 16, lg: 10 }}
-                  p={{ sm: 5, md: 5, lg: 16 }}
-                >
-                  <Box p={4}>
-                    <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-                      <WrapItem>
-                        <Box>
-                          <Heading as="h1" variants="section-title">
-                            Contact
-                          </Heading>
-                          <Text mt={{ sm: 5, md: 8, lg: 10 }}>
-                            Fill the below form to connect
-                          </Text>
-                          <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                            <Flex
-                              flexDirection="column"
-                              pl={1}
-                              spacing={10}
-                              alignItems="flex-start"
+    <ThemeProvider theme={lightTheme}>
+      <MainBox>
+        <Container>
+          <LogoComponent theme="light" />
+          <SocialIcons theme="light" />
+          <PowerButton />
+          <AnchorComponent />
+
+          <ContactForm>
+            <ContactFormContainer>
+              <form>
+                <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+                  <Flex>
+                    <WrapItem padding="0 1rem">
+                      <Box>
+                        <Heading color="black">Contact</Heading>
+                        <Text
+                          mt={{ sm: 3, md: 3, lg: 5 }}
+                          color="black"
+                          marginBottom={8}
+                        >
+                          Fill up the form below to contact
+                        </Text>
+                        <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                          <VStack pl={0} spacing={3} alignItems="flex-start">
+                            <Button
+                              height="45px"
+                              variant="ghost"
+                              background="none !important"
+                              border="none"
                               justifyContent="flex-start"
+                              leftIcon={<MdPhone color="#000000" size="20px" />}
                             >
-                              <Button
-                                size="md"
-                                height="50px"
-                                width="300px"
-                                variant="ghost"
-                                justifyContent="flex-start"
-                                padding="10px"
-                                leftIcon={<MdPhone size="20px" />}
-                              >
-                                +91-7976224204
-                              </Button>
-                              <Button
-                                height="50px"
-                                width="300px"
-                                justifyContent="flex-start"
-                                padding="10px"
-                                leftIcon={<MdEmail size="20px" />}
-                              >
-                                guptashubhang2000@gmail.com
-                              </Button>
-                              <Button
-                                height="50px"
-                                width="300px"
-                                justifyContent="flex-start"
-                                padding="10px"
-                                leftIcon={<MdLocationOn size="20px" />}
-                              >
-                                Jaipur, Rajasthan
-                              </Button>
-                            </Flex>
-                          </Box>
-                          <HStack
-                            mt={{ lg: 10, md: 10 }}
-                            spacing={20}
-                            px="auto"
-                            py={10}
-                            alignItems="flex-start"
-                          >
-                            <a
-                              target="_blank"
-                              href="https://www.linkedin.com/in/shubhang-gupta-a081ab201/"
-                              rel="noopener noreferrer"
+                              +91-7976224204
+                            </Button>
+                            <Button
+                              height="40px"
+                              variant="ghost"
+                              background="none !important"
+                              justifyContent="flex-start"
+                              border="none"
+                              leftIcon={<MdEmail color="#000000" size="20px" />}
                             >
-                              <IconButton
-                                aria-label="linkedin"
-                                variant="ghost"
-                                size="lg"
-                                isRound={true}
-                                icon={<BsLinkedin size="28px" />}
-                              />
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://github.com/shubhanggupta2000"
-                              rel="noopener noreferrer"
+                              guptashubhang2000@gmail.com
+                            </Button>
+                            <Button
+                              height="45px"
+                              variant="ghost"
+                              background="none !important"
+                              justifyContent="flex-start"
+                              border="none"
+                              leftIcon={
+                                <MdLocationOn color="#000000" size="20px" />
+                              }
                             >
-                              <IconButton
-                                aria-label="github"
-                                variant="ghost"
-                                size="lg"
-                                isRound={true}
-                                icon={<BsGithub size="28px" />}
-                              />
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://twitter.com/ShubhangGupta13"
-                              rel="noopener noreferrer"
-                            >
-                              <IconButton
-                                aria-label="twitter"
-                                variant="ghost"
-                                size="lg"
-                                isRound={true}
-                                icon={<BsTwitter size="28px" />}
-                              />
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://www.facebook.com/shubhang.agarwal.71"
-                              rel="noopener noreferrer"
-                            >
-                              <IconButton
-                                aria-label="facebook"
-                                variant="ghost"
-                                size="lg"
-                                isRound={true}
-                                icon={<BsFacebook size="28px" />}
-                              />
-                            </a>
-                            <a
-                              target="_blank"
-                              href="https://www.instagram.com/guptashubhang2000/"
-                              rel="noopener noreferrer"
-                            >
-                              <IconButton
-                                aria-label="Instagram"
-                                variant="ghost"
-                                size="lg"
-                                isRound={true}
-                                icon={<BsInstagram size="28px" />}
-                              />
-                            </a>
-                          </HStack>
+                              Gwalior, India
+                            </Button>
+                          </VStack>
                         </Box>
-                      </WrapItem>
-                      <WrapItem>
-                        <Box bg="white" borderRadius="lg">
-                          <Box m={8}>
-                            <VStack spacing={5}>
-                              <FormControl id="name">
-                                <FormLabel>Your Name</FormLabel>
-                                <InputGroup borderColor="#E0E1E7">
-                                  <InputLeftElement pointerEvents="none">
-                                    <BsPerson color="gray.800" />
-                                  </InputLeftElement>
-                                  <Input type="text" size="md" />
-                                </InputGroup>
-                              </FormControl>
-                              <FormControl id="name">
-                                <FormLabel>Mail</FormLabel>
-                                <InputGroup borderColor="#E0E1E7">
-                                  <InputLeftElement pointerEvents="none">
-                                    <MdOutlineEmail color="gray.800" />
-                                  </InputLeftElement>
-                                  <Input type="text" size="md" />
-                                </InputGroup>
-                              </FormControl>
-                              <FormControl id="name">
-                                <FormLabel>Message</FormLabel>
-                                <Textarea
-                                  borderColor="gray.300"
-                                  _hover={{ borderRadius: "gray.300" }}
-                                  placeholder="message"
+                        <HStack
+                          mt={{ lg: 10, md: 10 }}
+                          spacing={8}
+                          alignItems="flex-start"
+                          marginTop={8}
+                        >
+                          <IconButton
+                            aria-label="GitHub"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<BsGithub size="28px" />}
+                            onClick={() => handleButtonClick("github")}
+                            border="none"
+                          />
+                          <IconButton
+                            aria-label="LinkedIn"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<BsLinkedin size="28px" />}
+                            onClick={() => handleButtonClick("linkedin")}
+                            border="none"
+                          />
+                          <IconButton
+                            aria-label="Medium"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<FaMedium size="28px" />}
+                            onClick={() => handleButtonClick("medium")}
+                            border="none"
+                          />
+                          <IconButton
+                            aria-label="Twitter"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<FaSquareXTwitter size="28px" />}
+                            onClick={() => handleButtonClick("twitter")}
+                            border="none"
+                          />
+                          <IconButton
+                            aria-label="Quora"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<FaQuora size="28px" />}
+                            onClick={() => handleButtonClick("quora")}
+                            border="none"
+                          />
+                          <IconButton
+                            aria-label="Facebook"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<BsFacebook size="28px" />}
+                            onClick={() => handleButtonClick("facebook")}
+                            border="none"
+                          />
+                          <IconButton
+                            aria-label="Instagram"
+                            variant="ghost"
+                            size="lg"
+                            _hover={{ bg: "transparent", color: "white" }}
+                            icon={<BsInstagram size="28px" />}
+                            onClick={() => handleButtonClick("instagram")}
+                            border="none"
+                          />
+                        </HStack>
+                      </Box>
+                    </WrapItem>
+                    <WrapItem padding="0 1rem">
+                      <Box borderRadius="lg">
+                        <Box m={8} color="#0B0E3F">
+                          <VStack spacing={5} alignItems="flex-start">
+                            <FormControl id="name">
+                              <FormLabel>Your Name</FormLabel>
+                              <InputGroup>
+                                <InputLeftElement>
+                                  <BsPerson color="gray.800" />
+                                </InputLeftElement>
+                                <Input
+                                  type="text"
+                                  size="md"
+                                  border="none"
+                                  background="none"
+                                  borderBottom="2px solid black"
+                                  outline="none"
+                                  paddingLeft="1.1rem"
                                 />
-                              </FormControl>
-                              <FormControl id="name" float="right">
-                                <Button variant="solid">Send Message</Button>
-                              </FormControl>
-                            </VStack>
-                          </Box>
+                              </InputGroup>
+                            </FormControl>
+                            <FormControl id="name">
+                              <FormLabel>Mail</FormLabel>
+                              <InputGroup>
+                                <InputLeftElement>
+                                  <MdOutlineEmail color="gray.800" />
+                                </InputLeftElement>
+                                <Input
+                                  type="text"
+                                  size="md"
+                                  border="none"
+                                  background="none"
+                                  borderBottom="2px solid black"
+                                  outline="none"
+                                  paddingLeft="1.1rem"
+                                />
+                              </InputGroup>
+                            </FormControl>
+                            <FormControl id="name">
+                              <FormLabel>Message</FormLabel>
+                              <Textarea
+                                border="none"
+                                borderBottom="2px solid black"
+                                borderRadius="none"
+                                background="none"
+                                outline="none"
+                                _focus={{
+                                  borderBottom: "2px solid black",
+                                }}
+                                placeholder="write your message..."
+                              />
+                            </FormControl>
+                            <FormControl id="name" float="right">
+                              <Button
+                                variant="solid"
+                                bg="transparent"
+                                borderRadius="5px"
+                                padding={6}
+                                _hover={{
+                                  bg: "black",
+                                  color: "white",
+                                }}
+                                _active={{
+                                  bg: "white",
+                                  color: "black",
+                                }}
+                              >
+                                Send Message
+                              </Button>
+                            </FormControl>
+                          </VStack>
                         </Box>
-                      </WrapItem>
-                    </Wrap>
-                  </Box>
-                </Box>
-              </Flex>
-            </Container>
-          </motion.div>
-        </Center>
-        <BigTitle text="CONTACT" top="5rem" left="5rem" />
-      </Container>
-    </MainContainer>
+                      </Box>
+                    </WrapItem>
+                  </Flex>
+                </Wrap>
+              </form>
+            </ContactFormContainer>
+          </ContactForm>
+
+          <BigTitle text="CONTACT" top="10%" left="5%" />
+        </Container>
+      </MainBox>
+    </ThemeProvider>
   );
 };
 

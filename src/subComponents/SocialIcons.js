@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import {
-  Facebook,
   Github,
   Twitter,
   Linkedin,
-  Instagram,
+  Medium,
 } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
@@ -14,11 +13,9 @@ const Icons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: fixed;
   bottom: 0;
   left: 2rem;
-
   z-index: 3;
 
   & > *:not(:last-child) {
@@ -55,6 +52,7 @@ const SocialIcons = (props) => {
           />
         </a>
       </motion.div>
+
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -73,6 +71,7 @@ const SocialIcons = (props) => {
           />
         </a>
       </motion.div>
+
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -91,6 +90,7 @@ const SocialIcons = (props) => {
           />
         </a>
       </motion.div>
+
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -100,28 +100,9 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           rel="noreferrer"
-          href="https://facebook.com/shubhang.agarwal.71"
+          href="https://medium.com/@guptashubhang2000"
         >
-          <Facebook
-            width={25}
-            height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
-          />
-        </a>
-      </motion.div>
-
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.8 }}
-      >
-        <a
-          style={{ color: "inherit" }}
-          target="_blank"
-          rel="noreferrer"
-          href="https://www.instagram.com/guptashubhang2000/"
-        >
-          <Instagram
+          <Medium
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
