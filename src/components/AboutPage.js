@@ -34,6 +34,7 @@ const Spaceman = styled.div`
     height: auto;
   }
 `;
+//Main
 
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
