@@ -9,7 +9,6 @@ This repository contains the code for a stunning portfolio website built with Re
 - Improved user interactions with tooltips. Integrates Chakra UI for accessibility. Utilizes Tailwind CSS for utility-first styling.
 - Enhances visuals with Iconify icons. Highly customizable for personal portfolios.
 
-
 ## Getting Started
 
 To run this project locally, follow these steps:
@@ -27,12 +26,3 @@ Enjoy exploring and customizing this stunning portfolio website built with React
 ![1](https://github.com/shubhanggupta2000/portfolio/assets/79959361/79e07e5b-2c1a-4c3e-a929-01fb664b4ef4)
 ![2](https://github.com/shubhanggupta2000/portfolio/assets/79959361/e2edce9e-a03e-4dbb-9674-23aeafebb31b)
 ![3](https://github.com/shubhanggupta2000/portfolio/assets/79959361/d142486e-b774-4b5b-aac1-d2c1211cc640)
-
-
-
-
-
-
-
-
-
