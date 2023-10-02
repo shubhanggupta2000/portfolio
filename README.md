@@ -20,4 +20,9 @@ To run this project locally, follow these steps:
 
 Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
 
+# Under Development
+
 # Glimpse
+file:///home/faze_vennom/Pictures/Screenshots/1.png
+file:///home/faze_vennom/Pictures/Screenshots/2.png
+file:///home/faze_vennom/Pictures/Screenshots/3.png
