@@ -1,24 +1,51 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitle";
+import { YinYang } from "./AllSvgs";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
 `;
 
-const Main = styled.div`
-  
-`
+const Main = styled.div``;
+
+const Rotate = styled.span`
+  display: block;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+`;
 
 const WorkPage = () => {
+  const ref = useRef(null);
+  const yinyang = useRef(null);
+
+  useEffect(() => {
+    let element = ref.current;
+    const rotate = () => {
+      element.style.transform = `translateY(${-window.pageYOffset}px)`;
+
+      return (yinyang.current.style.transform =
+        "rotate(" + -window.pageYOffset + "deg)");
+    };
+
+    window.addEventListener("scroll", rotate);
+    return () => {
+      window.removeEventListener("scroll", rotate);
+    };
+  }, []);
+
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
@@ -26,9 +53,13 @@ const WorkPage = () => {
         <SocialIcons theme="dark" />
         <PowerButton theme="dark" />
 
-        <Main></Main>
+        <Main>
+          <Rotate ref={yinyang}>
+            <YinYang width={80} height={80} fill={DarkTheme.text} />
+          </Rotate>
+        </Main>
 
-        <BigTitle text="PROJECTS" top="10%" right="20%" />
+        <BigTitle text="PROJECTS" top="10%" right="10%" />
       </Box>
     </ThemeProvider>
   );
@@ -88,18 +119,18 @@ export default WorkPage;
 //   z-index: 1;
 // `;
 
-// // // Framer-motion Configuration
-// // const container = {
-// //   hidden: { opacity: 0 },
-// //   show: {
-// //     opacity: 1,
+// // Framer-motion Configuration
+// const container = {
+//   hidden: { opacity: 0 },
+//   show: {
+//     opacity: 1,
 
-// //     transition: {
-// //       staggerChildren: 0.5,
-// //       duration: 0.5,
-// //     },
-// //   },
-// // };
+//     transition: {
+//       staggerChildren: 0.5,
+//       duration: 0.5,
+//     },
+//   },
+// };
 
 // const IconItem = (props) => {
 //   return (
