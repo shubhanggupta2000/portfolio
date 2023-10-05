@@ -81,7 +81,8 @@ const AboutPage = () => {
           love to binge watch, play Basketball and observe the infinitude of
           life.
           <br /> <br />I believe everything is an Art when you put your
-          consciousness in it. You can connect with me via social links.
+          consciousness in it. You can connect with me via social links. I
+          eagerly anticipate the exchange of ideas and experiences.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
