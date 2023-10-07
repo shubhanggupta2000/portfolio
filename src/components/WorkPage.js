@@ -25,7 +25,7 @@ const WorkPage = () => {
         <PowerButton theme="dark" />
 
         {Work.map((d) => (
-          <Card key={d.id} data={d} />
+          <Card key={d.index} data={d} />
         ))}
 
         <BigTitle text="PROJECTS" top="10%" right="10%" />

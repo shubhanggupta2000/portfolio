@@ -34,6 +34,7 @@ import {
   BsInstagram,
 } from "react-icons/bs";
 import { FaSquareXTwitter, FaMedium, FaQuora } from "react-icons/fa6";
+import MapComponent from "./MapComponent";
 
 const MainBox = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -315,7 +316,18 @@ const ContactPage = () => {
               </ContactFormContainer>
             </ContactForm>
 
-            <div>Map</div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100%",
+                width: "50%",
+              }}
+            >
+              <MapComponent />
+            </div>
           </Main>
 
           <BigTitle text="CONTACT" top="10%" left="8%" />

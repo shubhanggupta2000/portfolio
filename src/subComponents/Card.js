@@ -41,10 +41,10 @@ const Card = (props) => {
         <Left>
           <h1>{name}</h1>
           <h3>{info}</h3>
-          {techStack.map((items) => {
+          {techStack.map((item, index) => {
             return (
-              <div>
-                <img src={items.icon} alt="" />
+              <div key={index}>
+                {item.icon && <item.icon {...item.options} />}
               </div>
             );
           })}
