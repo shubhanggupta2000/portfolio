@@ -7,6 +7,7 @@ import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitle";
 import Card from "../subComponents/Card";
 import { Work } from "../data/WorkData";
+import AnchorComponent from "../subComponents/Anchor";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -23,6 +24,7 @@ const WorkPage = () => {
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton theme="dark" />
+        <AnchorComponent />
 
         {Work.map((d) => (
           <Card key={d.index} data={d} />

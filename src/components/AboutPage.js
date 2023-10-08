@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes, ThemeProvider } from "styled-components";
 import { DarkTheme } from "./Themes";
-
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
@@ -34,7 +33,6 @@ const Spaceman = styled.div`
     height: auto;
   }
 `;
-//Main
 
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};

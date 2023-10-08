@@ -32,7 +32,7 @@ const AnchorComponent = (props) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      let scrollPosition = window.pageYOffset;
+      let scrollPosition = window.scrollY;
       let windowSize = window.innerHeight;
       let bodyHeight = document.body.offsetHeight;
 
@@ -42,7 +42,7 @@ const AnchorComponent = (props) => {
 
       ref.current.style.transform = `translateY(${-diffP}%)`;
 
-      if (window.pageYOffset > 5) {
+      if (window.scrollY > 5) {
         hiddenRef.current.style.display = "none";
       } else {
         hiddenRef.current.style.display = "block";

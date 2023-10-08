@@ -5,9 +5,9 @@ This repository contains the code for a stunning portfolio website built with Re
 
 - Utilizes Styled-Components for elegant styling. Smooth animations with Framer Motion.
 - React 18's createRoot for modern rendering. Enhances loading speed with lazy loading. Seamless navigation via React Router. Font Awesome icons for visual appeal.
-- Interactive scrolling with Locomotive Scroll. Consistent styling across browsers with Normalize.css. Monitors web performance with Web Vitals. Captivating particle animations with react-tsparticles. Adds parallax and tilt effects for a unique experience.
-- Improved user interactions with tooltips. Integrates Chakra UI for accessibility. Utilizes Tailwind CSS for utility-first styling.
-- Enhances visuals with Iconify icons. Highly customizable for personal portfolios.
+- Interactive scrolling with Locomotive Scroll. Monitors web performance with Web Vitals. Captivating particle animations with react-tsparticles. Adds parallax and tilt effects for a unique experience.
+- Improved user interactions with tooltips. Integrates Chakra UI for accessibility.
+- Highly customizable for personal portfolios.
 
 ## Getting Started
 
@@ -20,6 +20,15 @@ To run this project locally, follow these steps:
 Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
 
 # Under Development
+## To-do
+
+- [ ] About page box overflow correction
+- [ ] Workpage designing
+- [ ] Shift anchor from contactpage to workpage
+- [ ] Anchor properties and slider function correction
+- [ ] Workpage buttons design
+- [ ] Workpage techStack design
+- [ ] Contactpage map styling
 
 # Glimpse
 

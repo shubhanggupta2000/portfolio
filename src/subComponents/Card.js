@@ -1,7 +1,7 @@
 // import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { Tilt } from "react-tilt";
+import Parallax from "react-parallax-tilt";
 
 const Container = styled.div`
   display: flex;
@@ -29,7 +29,10 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+  width: 100%;
+  border-radius: 30px;
+`;
 
 const Card = (props) => {
   const { index, name, info, hostlink, githubUrl, imagePath, techStack } =
@@ -59,9 +62,9 @@ const Card = (props) => {
         </Left>
         <Right>
           <ImageContainer>
-            <Tilt tiltMaxAngleX={0.5} tiltMaxAngleY={0.5} scale={1}>
+            <Parallax tiltMaxAngleX={15} tiltMaxAngleY={15}>
               <img src={imagePath} width="100%" alt="" />
-            </Tilt>
+            </Parallax>
           </ImageContainer>
         </Right>
       </Container>

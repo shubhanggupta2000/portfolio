@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chakra-ui/color-mode": "^2.1.12",
     "@chakra-ui/react": "^2.6.0",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
@@ -12,20 +11,15 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^10.12.4",
     "leaflet": "^1.9.4",
-    "locomotive-scroll": "^4.1.4",
-    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-leaflet": "^4.2.1",
-    "react-parallax-tilt": "^1.7.143",
+    "react-parallax-tilt": "^1.7.170",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
-    "react-tilt": "^1.0.2",
-    "react-tooltip": "^5.21.5",
     "react-tsparticles": "^2.9.3",
     "styled-components": "^5.3.10",
     "tsparticles": "^2.9.3",
@@ -56,10 +50,6 @@
     ]
   },
   "devDependencies": {
-    "@iconify/icons-logos": "^1.2.25",
-    "@iconify/react": "^4.1.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2"
+    "eslint-config-react-app": "^7.0.1"
   }
 }
