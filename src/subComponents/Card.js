@@ -1,7 +1,10 @@
-// import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import Parallax from "react-parallax-tilt";
+
+const MainContainer = styled.div`
+  margin-left: 4%;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -11,27 +14,71 @@ const Container = styled.div`
   color: white;
   justify-content: space-around;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Right = styled.div`
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
-const ImageContainer = styled.div`
-  width: 100%;
-  border-radius: 30px;
+const ImageContainer = styled.div``;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+`;
+
+const Button = styled.button`
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+`;
+
+const TechStackContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 10px;
+`;
+
+const TechStackItem = styled.div`
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
 `;
 
 const Card = (props) => {
@@ -39,36 +86,43 @@ const Card = (props) => {
     props.data;
 
   return (
-    <>
+    <MainContainer>
       <Container index={index}>
         <Left>
           <h1>{name}</h1>
           <h3>{info}</h3>
-          {techStack.map((item, index) => {
-            return (
-              <div key={index}>
-                {item.icon && <item.icon {...item.options} />}
-              </div>
-            );
-          })}
-          <span>
+          <TechStackContainer>
+            {techStack.map((item, index) => {
+              return (
+                <TechStackItem key={index}>
+                  {item.icon && <item.icon {...item.options} />}
+                </TechStackItem>
+              );
+            })}
+          </TechStackContainer>
+          <ButtonsContainer>
             <a href={hostlink}>
-              <button>See Live</button>
+              <Button>See Live</Button>
             </a>
             <a href={githubUrl}>
-              <button>Github</button>
+              <Button>Github</Button>
             </a>
-          </span>
+          </ButtonsContainer>
         </Left>
         <Right>
           <ImageContainer>
             <Parallax tiltMaxAngleX={15} tiltMaxAngleY={15}>
-              <img src={imagePath} width="100%" alt="" />
+              <img
+                src={imagePath}
+                width="100%"
+                alt=""
+                style={{ borderRadius: "10px" }}
+              />
             </Parallax>
           </ImageContainer>
         </Right>
       </Container>
-    </>
+    </MainContainer>
   );
 };
 

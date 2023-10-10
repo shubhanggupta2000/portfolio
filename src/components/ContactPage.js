@@ -72,7 +72,6 @@ const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
   width: 100%;
   height: 100%;
-
   position: relative;
   padding-bottom: 5rem;
   maxW="container.xl"
@@ -82,6 +81,24 @@ const Container = styled.div`
 `;
 
 const Main = styled.div``;
+
+const socialMediaIcons = [
+  { label: "GitHub", icon: <BsGithub size="28px" />, platform: "github" },
+  { label: "LinkedIn", icon: <BsLinkedin size="28px" />, platform: "linkedin" },
+  { label: "Medium", icon: <FaMedium size="28px" />, platform: "medium" },
+  {
+    label: "Twitter",
+    icon: <FaSquareXTwitter size="28px" />,
+    platform: "twitter",
+  },
+  { label: "Quora", icon: <FaQuora size="28px" />, platform: "quora" },
+  { label: "Facebook", icon: <BsFacebook size="28px" />, platform: "facebook" },
+  {
+    label: "Instagram",
+    icon: <BsInstagram size="28px" />,
+    platform: "instagram",
+  },
+];
 
 const ContactPage = () => {
   const socialMediaLinks = {
@@ -170,69 +187,20 @@ const ContactPage = () => {
                             alignItems="flex-start"
                             marginTop={8}
                           >
-                            <IconButton
-                              aria-label="GitHub"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<BsGithub size="28px" />}
-                              onClick={() => handleButtonClick("github")}
-                              border="none"
-                            />
-                            <IconButton
-                              aria-label="LinkedIn"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<BsLinkedin size="28px" />}
-                              onClick={() => handleButtonClick("linkedin")}
-                              border="none"
-                            />
-                            <IconButton
-                              aria-label="Medium"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<FaMedium size="28px" />}
-                              onClick={() => handleButtonClick("medium")}
-                              border="none"
-                            />
-                            <IconButton
-                              aria-label="Twitter"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<FaSquareXTwitter size="28px" />}
-                              onClick={() => handleButtonClick("twitter")}
-                              border="none"
-                            />
-                            <IconButton
-                              aria-label="Quora"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<FaQuora size="28px" />}
-                              onClick={() => handleButtonClick("quora")}
-                              border="none"
-                            />
-                            <IconButton
-                              aria-label="Facebook"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<BsFacebook size="28px" />}
-                              onClick={() => handleButtonClick("facebook")}
-                              border="none"
-                            />
-                            <IconButton
-                              aria-label="Instagram"
-                              variant="ghost"
-                              size="lg"
-                              _hover={{ bg: "transparent", color: "white" }}
-                              icon={<BsInstagram size="28px" />}
-                              onClick={() => handleButtonClick("instagram")}
-                              border="none"
-                            />
+                            {socialMediaIcons.map(
+                              ({ label, icon, platform }) => (
+                                <IconButton
+                                  key={platform}
+                                  aria-label={label}
+                                  variant="ghost"
+                                  size="lg"
+                                  _hover={{ bg: "transparent", color: "white" }}
+                                  icon={icon}
+                                  onClick={() => handleButtonClick(platform)}
+                                  border="none"
+                                />
+                              )
+                            )}
                           </HStack>
                         </Box>
                       </WrapItem>
@@ -318,11 +286,8 @@ const ContactPage = () => {
 
             <div
               style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
+                display: "block",
+                margin: "0 auto",
                 width: "50%",
               }}
             >

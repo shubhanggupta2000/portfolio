@@ -20,15 +20,12 @@ To run this project locally, follow these steps:
 Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
 
 # Under Development
-## To-do
+## To-do (list in accordance with priority)
 
-- [ ] About page box overflow correction
-- [ ] Workpage designing
-- [ ] Shift anchor from contactpage to workpage
+- [ ] About page box overflow correction upon magnification.
 - [ ] Anchor properties and slider function correction
-- [ ] Workpage buttons design
-- [ ] Workpage techStack design
-- [ ] Contactpage map styling
+- [ ] AboutPage, SkillPage particleComponent correction
+- [ ] Shift anchor from contactpage to workpage.
 
 # Glimpse
 

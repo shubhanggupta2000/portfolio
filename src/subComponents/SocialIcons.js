@@ -15,7 +15,7 @@ const Icons = styled.div`
   align-items: center;
   position: fixed;
   bottom: 0;
-  left: 2rem;
+  left: 2%;
   z-index: 3;
 
   & > *:not(:last-child) {
