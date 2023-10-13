@@ -17,9 +17,9 @@ const Box = styled.div`
 `;
 
 const float = keyframes`
-0% { transform: translateY(-10px) }
-50% { transform: translateY(15px) translateX(15px) }
-100% { transform: translateY(-10px) }
+  0% { transform: translateY(-10px) }
+  50% { transform: translateY(15px) translateX(15px) }
+  100% { transform: translateY(-10px) }
 `;
 
 const Spaceman = styled.div`
@@ -39,14 +39,13 @@ const Main = styled.div`
   color: ${(props) => props.theme.text};
   padding: 2rem;
   width: 50vw;
-  height: 60vh;
+  // height: 60vh;
   z-index: 3;
   line-height: 1.5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
   font-size: calc(0.6rem + 1vw);
   backdrop-filter: blur(4px);
+  word-wrap: break-word;
 
   position: absolute;
   left: calc(5rem + 5vw);
@@ -69,18 +68,20 @@ const AboutPage = () => {
         </Spaceman>
 
         <Main>
-          I'm a full stack developer located in India. I love to create simple
-          yet beautiful websites with great user experience. I'm interested in
-          the whole web development stack.
+          I'm a full stack developer based in India with a passion for crafting
+          elegant and user-centric websites. My expertise covers the entire
+          spectrum of web development, particularly within the frontend domain.
           <br /> <br />
-          I Like trying new things and building great projects. I'm an
-          independent developer and really looking forward to collab with great
-          opportunities. I hope to start blogging soon too. When not online, I
-          love to binge watch, play Basketball and observe the infinitude of
-          life.
-          <br /> <br />I believe everything is an Art when you put your
-          consciousness in it. You can connect with me via social links. I
-          eagerly anticipate the exchange of ideas and experiences.
+          As an independent developer, I am eager to collaborate with
+          opportunities that align with my skills and vision. I am currently in
+          the early stages of my journey into the world of blogging, which you
+          can find on Medium. When I'm not immersed in the digital world, I
+          enjoy watching films, playing basketball, and contemplating the
+          complexities of existence.
+          <br /> <br />I believe that every endeavor becomes an art form when
+          approached with mindfulness. You can reach out to me through my social
+          media profiles. I eagerly anticipate the exchange of ideas and
+          experiences.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
