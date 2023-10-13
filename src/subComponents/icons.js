@@ -39,6 +39,7 @@ import {
   SiReactrouter,
   SiVite,
   SiBootstrap,
+  SiStripe,
 } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
 import { FaSass, FaNpm, FaGitlab } from "react-icons/fa";
@@ -152,6 +153,14 @@ const icons = [
   {
     name: "Sass",
     icon: FaSass,
+    options: {
+      color: "#CD6799",
+      size: "100px",
+    },
+  },
+  {
+    name: "Stripe",
+    icon: SiStripe,
     options: {
       color: "#CD6799",
       size: "100px",

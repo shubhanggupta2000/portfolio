@@ -10,7 +10,7 @@ import astronaut from "../assets/Images/spaceman.png";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -39,7 +39,6 @@ const Main = styled.div`
   color: ${(props) => props.theme.text};
   padding: 2rem;
   width: 50vw;
-  // height: 60vh;
   z-index: 3;
   line-height: 1.5;
   display: inline-block;
