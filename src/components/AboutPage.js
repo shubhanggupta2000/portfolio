@@ -72,9 +72,8 @@ const AboutPage = () => {
           spectrum of web development, particularly within the frontend domain.
           <br /> <br />
           As an independent developer, I am eager to collaborate with
-          opportunities that align with my skills and vision. I am currently in
-          the early stages of my journey into the world of blogging, which you
-          can find on Medium. When I'm not immersed in the digital world, I
+          opportunities that align with my skills and vision. You
+          can find my blogs on Medium. When I'm not immersed in the digital world, I
           enjoy watching films, playing basketball, and contemplating the
           complexities of existence.
           <br /> <br />I believe that every endeavor becomes an art form when

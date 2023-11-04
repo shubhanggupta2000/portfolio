@@ -151,7 +151,7 @@ const Main = () => {
         </Center>
 
         <Resume
-          to="https://drive.google.com/file/d/1WFlmmWfYNDZI4NPsNh6iMA8D55NMhO90/view?usp=sharing"
+          to="https://drive.google.com/file/d/1eC9jNjCDHyz5CwYts7aXtlf7fn2riR-x/view?usp=drive_link"
           target="_blank"
         >
           <motion.h2
