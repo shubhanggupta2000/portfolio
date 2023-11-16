@@ -96,10 +96,11 @@ const MySkillsPage = () => {
     <>
       <ThemeProvider theme={lightTheme}>
         <Box>
+          <ParticleComponent theme="light" />
           <LogoComponent theme="light" />
           <SocialIcons theme="light" />
           <PowerButton />
-          <ParticleComponent theme="light" />
+
           <Main>
             <Title>
               <Design width={40} height={40} /> Designer
@@ -111,14 +112,14 @@ const MySkillsPage = () => {
             <Description>
               <strong>I like to Design</strong>
               <ul>
-                <li>Web Design</li>
+                <li>Web Pages</li>
                 <li>Mobile Apps</li>
               </ul>
             </Description>
             <Description>
               <strong>Tools</strong>
               <ul>
-                <li>Figma</li>
+                <li>Figma, Canva</li>
               </ul>
             </Description>
           </Main>
@@ -134,12 +135,12 @@ const MySkillsPage = () => {
               <strong>Skills</strong>
               <p>
                 HTML, CSS, Javascript, React, Redux, Sass, Bootstrap, Tailwind,
-                Firebase etc
+                etc.
               </p>
             </Description>
             <Description>
               <strong>Tools</strong>
-              <p>VScode, Github, etc.</p>
+              <p>VScode, Github, Azure Devops etc.</p>
             </Description>
           </Main>
           <BigTitle text="SKILLS" top="80%" right="30%" />

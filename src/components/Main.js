@@ -77,6 +77,7 @@ const ABOUT = styled(NavLink)`
   text-decoration: none;
   z-index: 1;
 `;
+
 const SKILLS = styled(NavLink)`
   color: ${(props) => props.theme.text};
   text-decoration: none;
@@ -187,7 +188,8 @@ const Main = () => {
             Contact Me
           </motion.h2>
         </Contact>
-        <WORK to="/work" click={+click}>
+
+        <WORK to="/work" click={click}>
           <motion.h2
             initial={{
               y: -200,
@@ -204,7 +206,7 @@ const Main = () => {
           </motion.h2>
         </WORK>
         <BottomBar>
-          <ABOUT to="/about" click={+click}>
+          <ABOUT to="/about" click={click}>
             <motion.h2
               initial={{
                 y: 200,

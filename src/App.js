@@ -19,7 +19,7 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={lightTheme}>
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode="wait">
           <Routes location={location}>
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<AboutPage />} />

@@ -162,7 +162,7 @@ const icons = [
     name: "Stripe",
     icon: SiStripe,
     options: {
-      color: "#CD6799",
+      color: "#635bff",
       size: "100px",
     },
   },
