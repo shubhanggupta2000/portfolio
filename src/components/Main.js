@@ -107,6 +107,7 @@ const Center = styled.button`
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
+  
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
@@ -152,7 +153,7 @@ const Main = () => {
         </Center>
 
         <Resume
-          to="https://drive.google.com/file/d/1eC9jNjCDHyz5CwYts7aXtlf7fn2riR-x/view?usp=drive_link"
+          to="https://drive.google.com/file/d/1MPT4DP0GENrT5UFr-Z_r_djn4ATPMo6l/view?usp=drive_link"
           target="_blank"
         >
           <motion.h2

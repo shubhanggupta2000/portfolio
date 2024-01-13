@@ -32,7 +32,6 @@ import {
   SiBabel,
   SiDjango,
   SiExpress,
-  SiGooglecloud,
   SiAntdesign,
   SiJupyter,
   SiNodemon,
@@ -382,14 +381,14 @@ const icons = [
       size: "100px",
     },
   },
-  {
-    name: "Google Cloud Platform",
-    icon: SiGooglecloud,
-    options: {
-      color: "#4285F4",
-      size: "100px",
-    },
-  },
+  // {
+  //   name: "Google Cloud Platform",
+  //   icon: SiGooglecloud,
+  //   options: {
+  //     color: "#4285F4",
+  //     size: "100px",
+  //   },
+  // },
   {
     name: "Django",
     icon: SiDjango,

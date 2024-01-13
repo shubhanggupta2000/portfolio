@@ -8,7 +8,6 @@ const Box = styled(motion.div)`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   width: 65vw;
   height: 55vh;
   display: flex;
@@ -25,13 +24,14 @@ const Box = styled(motion.div)`
         ${(props) => props.theme.text} 50%
       )
       top;
+      
   background-repeat: no-repeat;
   background-size: 100% 2px;
   border-left: 2px solid ${(props) => props.theme.body};
   border-right: 2px solid ${(props) => props.theme.text};
-
   z-index: 1;
 `;
+
 const SubBox = styled.div`
   width: 50%;
   position: relative;
@@ -52,7 +52,6 @@ const Text = styled.div`
   color: ${(props) => props.theme.body};
   padding: 2rem;
   cursor: pointer;
-
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
