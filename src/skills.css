@@ -11,6 +11,7 @@
   justify-content: center;
   display: flex;
   font-style: italic;
+  padding-top: 6%;
   padding-bottom: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -32,14 +33,14 @@
   align-items: center;
   flex-wrap: wrap;
   width: fit-content;
-  padding: 0px 10px;
+  padding: 0px 100px;
   height: 100%;
 }
 
 .skill_icons_section svg {
   width: 55px;
   margin: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   height: auto;
   cursor: pointer;
   transition: 0.2s;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ConfigDark from "../config/particlesjs-config.json";
 import ConfigLight from "../config/particlesjs-config-light.json";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 const Box = styled.div`
   position: absolute;
@@ -15,7 +15,7 @@ const Box = styled.div`
 
 const ParticlesComponent = (props) => {
   const particlesInit = async (main) => {
-    await loadFull(main);
+    await loadSlim(main);
   };
 
   return (
@@ -23,7 +23,7 @@ const ParticlesComponent = (props) => {
       <Particles
         id="tsparticles"
         style={{ position: "absolute", top: 0 }}
-        params={props.theme === "light" ? ConfigLight : ConfigDark}
+        options={props.theme === "light" ? ConfigLight : ConfigDark}
         init={particlesInit}
       />
     </Box>

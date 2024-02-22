@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Parallax from "react-parallax-tilt";
 
 const MainContainer = styled.div`
-  margin-left: 4%;
+  margin: 4%;
 `;
 
 const Container = styled.div`
@@ -14,22 +14,21 @@ const Container = styled.div`
   color: white;
   justify-content: space-around;
   align-items: center;
-  margin-top: 5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
   }
 `;
 
 const Right = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem;
+  padding: 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 `;
@@ -40,12 +39,10 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     width: 100%;
   }
 `;
-
-const ImageContainer = styled.div``;
 
 const ButtonsContainer = styled.div`
   display: flex;
@@ -84,10 +81,19 @@ const TechStackItem = styled.div`
 const Card = (props) => {
   const { index, name, info, hostlink, githubUrl, imagePath, techStack } =
     props.data;
-
   return (
     <MainContainer>
       <Container index={index}>
+        <Right>
+          <Parallax tiltMaxAngleX={15} tiltMaxAngleY={15}>
+            <img
+              src={imagePath}
+              width="100%"
+              alt=""
+              style={{ borderRadius: "10px" }}
+            />
+          </Parallax>
+        </Right>
         <Left>
           <h1>{name}</h1>
           <h3>{info}</h3>
@@ -109,18 +115,6 @@ const Card = (props) => {
             </a>
           </ButtonsContainer>
         </Left>
-        <Right>
-          <ImageContainer>
-            <Parallax tiltMaxAngleX={15} tiltMaxAngleY={15}>
-              <img
-                src={imagePath}
-                width="100%"
-                alt=""
-                style={{ borderRadius: "10px" }}
-              />
-            </Parallax>
-          </ImageContainer>
-        </Right>
       </Container>
     </MainContainer>
   );

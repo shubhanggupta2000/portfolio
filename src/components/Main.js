@@ -32,18 +32,18 @@ const Container = styled.div`
 const Contact = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
-  top: 54%;
-  right: calc(0.2rem + 0.2vw);
-  transform: rotate(90deg) translate(-50%, -50%);
+  top: 2rem;
+  right: 4%;
   text-decoration: none;
   z-index: 1;
+  display: flex;
 `;
 
 const Resume = styled(NavLink)`
-  color: ${(props) => props.theme.text};
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
-  right: 3rem;
+  left: 8%;
   text-decoration: none;
   z-index: 1;
   display: flex;
@@ -51,9 +51,18 @@ const Resume = styled(NavLink)`
   gap: 0.5rem;
 `;
 
+const BLOG = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 50%;
+  right: calc(1rem + 2vw);
+  transform: rotate(90deg) translate(-50%, -50%);
+  text-decoration: none;
+  z-index: 1;
+`;
+
 const WORK = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
-
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -107,7 +116,7 @@ const Center = styled.button`
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
-  
+
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
@@ -152,9 +161,44 @@ const Main = () => {
           <span>click here</span>
         </Center>
 
+        <Contact to="/contact">
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Contact Me
+          </motion.h2>
+        </Contact>
+
+        <BLOG to="/blog">
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Blog
+          </motion.h2>
+        </BLOG>
+
         <Resume
           to="https://drive.google.com/file/d/1MPT4DP0GENrT5UFr-Z_r_djn4ATPMo6l/view?usp=drive_link"
           target="_blank"
+          click={click}
         >
           <motion.h2
             initial={{
@@ -172,23 +216,6 @@ const Main = () => {
             Resume
           </motion.h2>
         </Resume>
-
-        <Contact to="/contact">
-          <motion.h2
-            initial={{
-              y: -200,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 1 },
-            }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Contact Me
-          </motion.h2>
-        </Contact>
 
         <WORK to="/work" click={click}>
           <motion.h2

@@ -5,8 +5,7 @@ import SocialIcons from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import BigTitle from "../subComponents/BigTitle";
 import { lightTheme } from "./Themes";
-import AnchorComponent from "../subComponents/Anchor";
-import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
+import img from "../assets/Images/aman-pal-15r9RAOy38Q-unsplash.jpg";
 import {
   Flex,
   Box,
@@ -80,8 +79,6 @@ const Container = styled.div`
   overflow="hidden"
 `;
 
-const Main = styled.div``;
-
 const socialMediaIcons = [
   { label: "GitHub", icon: <BsGithub size="28px" />, platform: "github" },
   { label: "LinkedIn", icon: <BsLinkedin size="28px" />, platform: "linkedin" },
@@ -123,9 +120,8 @@ const ContactPage = () => {
           <LogoComponent theme="light" />
           <SocialIcons theme="light" />
           <PowerButton />
-          <AnchorComponent />
 
-          <Main>
+          <div>
             <ContactForm>
               <ContactFormContainer>
                 <form>
@@ -293,7 +289,7 @@ const ContactPage = () => {
             >
               <MapComponent />
             </div>
-          </Main>
+          </div>
 
           <BigTitle text="CONTACT" top="10%" left="8%" />
         </Container>

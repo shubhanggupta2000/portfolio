@@ -66,7 +66,13 @@ export const Work = [
     index: 5,
     name: "Closet",
     info: "An Ecommerce website with Sass and mobile first approach.",
-    techStack: findIconsData(["React", "Material UI", "Axios", "Netlify", "Sass"]),
+    techStack: findIconsData([
+      "React",
+      "Material UI",
+      "Axios",
+      "Netlify",
+      "Sass",
+    ]),
     githubUrl: "https://github.com/shubhanggupta2000/Closet",
     hostlink: "https://fazevennom-closet-ecommerce.netlify.app/",
     imagePath:
@@ -116,12 +122,7 @@ export const Work = [
     index: 9,
     name: "Evolux",
     info: "A car rental website with smooth scrolling, captivating animations, and a delightful user interface.",
-    techStack: findIconsData([
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Vercel",
-    ]),
+    techStack: findIconsData(["HTML", "CSS", "Javascript", "Vercel"]),
     githubUrl: "https://github.com/shubhanggupta2000/evolux-car-website",
     hostlink: "https://evolux-car-website.vercel.app/",
     imagePath:
@@ -131,12 +132,7 @@ export const Work = [
     index: 10,
     name: "Movies Info",
     info: "A simple web-app that provides a brief overview of any of your favourite movies.",
-    techStack: findIconsData([
-      "React",
-      "Sass",
-      "React Router",
-      "Netlify",
-    ]),
+    techStack: findIconsData(["React", "Sass", "React Router", "Netlify"]),
     githubUrl: "https://github.com/shubhanggupta2000/movies-info",
     hostlink: "https://fazevennom-movies-info.netlify.app/",
     imagePath:
@@ -146,10 +142,7 @@ export const Work = [
     index: 11,
     name: "Quiz App",
     info: "An amazing quiz application build with React & Semantic-UI that lets you play fully customized quiz in your browser.",
-    techStack: findIconsData([
-      "React",
-      "Netlify",
-    ]),
+    techStack: findIconsData(["React", "Netlify"]),
     githubUrl: "https://github.com/shubhanggupta2000/quiz-app",
     hostlink: "https://fazevennom-quiz-app.vercel.app/",
     imagePath:
@@ -159,11 +152,7 @@ export const Work = [
     index: 12,
     name: "Shoppy Dashboard",
     info: "An admin panel with Dashboard, calender with reminders and many more features.",
-    techStack: findIconsData([
-      "React",
-      "Tailwind",
-      "Netlify",
-    ]),
+    techStack: findIconsData(["React", "Tailwind", "Netlify"]),
     githubUrl: "https://github.com/shubhanggupta2000/syncfusion-dashboard",
     hostlink: "https://fazevennom-syncfusion-dashboard.netlify.app/",
     imagePath:

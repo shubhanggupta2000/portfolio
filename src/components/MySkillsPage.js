@@ -30,7 +30,6 @@ const Main = styled.div`
   z-index: 3;
   line-height: 1.5;
   cursor: pointer;
-
   font-family: "Ubuntu Mono", monospace;
   display: flex;
   flex-direction: column;
@@ -63,7 +62,6 @@ const Description = styled.div`
   color: ${(props) => props.theme.text};
   font-size: calc(0.6em + 1vw);
   padding: 0.5rem 0;
-
   ${Main}:hover & {
     color: ${(props) => props.theme.body};
   }
@@ -79,7 +77,7 @@ const Description = styled.div`
 `;
 
 const MySkillsPage = () => {
-  const theme = useTheme();
+  const theme1 = useTheme();
 
   const IconItem = (props) => {
     return (
@@ -93,78 +91,79 @@ const MySkillsPage = () => {
   };
 
   return (
-    <>
-      <ThemeProvider theme={lightTheme}>
-        <Box>
-          <ParticleComponent theme="light" />
-          <LogoComponent theme="light" />
-          <SocialIcons theme="light" />
-          <PowerButton />
+    // <>
+    <ThemeProvider theme={lightTheme}>
+      <div className="title" style={{ backgroundColor: theme1.body }}>
+        My Tech Stack
+      </div>
+      <div className="skills" style={{ backgroundColor: theme1.body }}>
+        <div className="skill_icons_section">
+          {icons.map(
+            (icons, index) =>
+              icons.icon && (
+                <IconItem
+                  key={index}
+                  icon={icons.icon}
+                  options={icons.options}
+                  name={icons.name}
+                ></IconItem>
+              )
+          )}
+        </div>
+      </div>
+      <Box>
+        <LogoComponent theme="light" />
+        <SocialIcons theme="light" />
+        <PowerButton />
+        <ParticleComponent theme="light" />
 
-          <Main>
-            <Title>
-              <Design width={40} height={40} /> Designer
-            </Title>
-            <Description>
-              I love to create design which speaks, Keep it clean, minimal and
-              simple.
-            </Description>
-            <Description>
-              <strong>I like to Design</strong>
-              <ul>
-                <li>Web Pages</li>
-                <li>Mobile Apps</li>
-              </ul>
-            </Description>
-            <Description>
-              <strong>Tools</strong>
-              <ul>
-                <li>Figma, Canva</li>
-              </ul>
-            </Description>
-          </Main>
-          <Main>
-            <Title>
-              <Develope width={40} height={40} /> Frontend Developer
-            </Title>
-            <Description>
-              I value business or brand for which I'm creating, thus I enjoy
-              bringing new ideas to life.
-            </Description>
-            <Description>
-              <strong>Skills</strong>
-              <p>
-                HTML, CSS, Javascript, React, Redux, Sass, Bootstrap, Tailwind,
-                etc.
-              </p>
-            </Description>
-            <Description>
-              <strong>Tools</strong>
-              <p>VScode, Github, Azure Devops etc.</p>
-            </Description>
-          </Main>
-          <BigTitle text="SKILLS" top="80%" right="30%" />
-        </Box>
-        <div className="title" style={{ backgroundColor: theme.body }}>
-          My Tech Stack
-        </div>
-        <div className="skills" style={{ backgroundColor: theme.body }}>
-          <div className="skill_icons_section">
-            {icons.map(
-              (icons, index) =>
-                icons.icon && (
-                  <IconItem
-                    key={index}
-                    icon={icons.icon}
-                    options={icons.options}
-                    name={icons.name}
-                  ></IconItem>
-                )
-            )}
-          </div>
-        </div>
-      </ThemeProvider>
-    </>
+        <Main>
+          <Title>
+            <Design width={40} height={40} /> Designer
+          </Title>
+          <Description>
+            I love to create design which speaks, Keep it clean, minimal and
+            simple.
+          </Description>
+          <Description>
+            <strong>I like to Design</strong>
+            <ul>
+              <li>Web Pages</li>
+              <li>Mobile Apps</li>
+            </ul>
+          </Description>
+          <Description>
+            <strong>Tools</strong>
+            <ul>
+              <li>Figma, Canva</li>
+            </ul>
+          </Description>
+        </Main>
+        <Main>
+          <Title>
+            <Develope width={40} height={40} /> Frontend Developer
+          </Title>
+          <Description>
+            I value business or brand for which I'm creating, thus I enjoy
+            bringing new ideas to life.
+          </Description>
+          <Description>
+            <strong>Skills</strong>
+            <p>
+              HTML, CSS, Javascript, React, Redux, Sass, Bootstrap, Tailwind,
+              etc.{" "}
+            </p>
+          </Description>
+          <Description>
+            <strong>Tools</strong>
+            <p>VScode, Github, Azure Devops etc.</p>
+          </Description>
+        </Main>
+
+        <BigTitle text="SKILLS" top="10%" right="10%" />
+      </Box>
+    </ThemeProvider>
+    // </>
   );
 };
 

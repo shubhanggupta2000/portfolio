@@ -323,7 +323,7 @@ const icons = [
     options: {
       color: "#2596be",
       size: "100px",
-    }
+    },
   },
   {
     name: "ViteJS",

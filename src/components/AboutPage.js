@@ -10,16 +10,16 @@ import astronaut from "../assets/Images/spaceman.png";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
 `;
 
 const float = keyframes`
-  0% { transform: translateY(-10px) }
-  50% { transform: translateY(15px) translateX(15px) }
-  100% { transform: translateY(-10px) }
+0% { transform: translateY(-10px) }
+50% { transform: translateY(15px) translateX(15px) }
+100% { transform: translateY(-10px) }
 `;
 
 const Spaceman = styled.div`
@@ -41,14 +41,15 @@ const Main = styled.div`
   width: 50vw;
   z-index: 3;
   line-height: 1.5;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: calc(0.6rem + 1vw);
   backdrop-filter: blur(4px);
-  word-wrap: break-word;
 
   position: absolute;
   left: calc(5rem + 5vw);
-  top: 10rem;
+  top: 13rem;
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
 `;
@@ -68,18 +69,16 @@ const AboutPage = () => {
 
         <Main>
           I'm a full stack developer based in India with a passion for crafting
-          elegant and user-centric websites. My expertise covers the entire
-          spectrum of web development, particularly within the frontend domain.
+          user-centric websites. My expertise covers the entire spectrum of
+          web-dev, particularly within the frontend domain.
           <br /> <br />
-          As an independent developer, I am eager to collaborate with
-          opportunities that align with my skills and vision. You
-          can find my blogs on Medium. When I'm not immersed in the digital world, I
-          enjoy watching films, playing basketball, and contemplating the
-          complexities of existence.
+          As a developer, I'm eager to collaborate with opportunities that align
+          with my skills and vision. You can find my blogs on Medium. When I'm
+          not immersed in the digital world, I enjoy watching films, playing
+          basketball, and contemplating the complexities of existence.
           <br /> <br />I believe that every endeavor becomes an art form when
           approached with mindfulness. You can reach out to me through my social
-          media profiles. I eagerly anticipate the exchange of ideas and
-          experiences.
+          media. I eagerly anticipate the exchange of ideas and experiences.
         </Main>
 
         <BigTitle text="ABOUT" top="10%" left="5%" />
