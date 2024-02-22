@@ -19,14 +19,6 @@ To run this project locally, follow these steps:
 
 Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
 
-# Under Development
-## To-do (list in accordance with priority)
-
-- [ ] About page box overflow correction upon magnification.
-- [ ] Anchor properties and slider function correction
-- [ ] AboutPage, SkillPage particleComponent correction
-- [ ] Shift anchor from contactpage to workpage.
-
 # Glimpse
 
 ![1](https://github.com/shubhanggupta2000/portfolio/assets/79959361/79e07e5b-2c1a-4c3e-a929-01fb664b4ef4)
