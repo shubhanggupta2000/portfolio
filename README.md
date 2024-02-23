@@ -21,8 +21,6 @@ Enjoy exploring and customizing this stunning portfolio website built with React
 
 # Glimpse
 
-file:///home/faze_vennom/Pictures/Screenshots/1.png
-
-file:///home/faze_vennom/Pictures/Screenshots/2.png
-
-file:///home/faze_vennom/Pictures/Screenshots/3.png
+![1](https://github.com/shubhanggupta2000/portfolio/assets/79959361/7af1293c-3d30-420a-85f8-d321ef97f413)
+![2](https://github.com/shubhanggupta2000/portfolio/assets/79959361/fdd6199d-45e9-4c72-ac63-d399c4bd80d1)
+![3](https://github.com/shubhanggupta2000/portfolio/assets/79959361/453aafed-bf4f-48a3-a106-bf10b43fad8a)
