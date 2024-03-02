@@ -85,7 +85,7 @@ const Card = (props) => {
     <MainContainer>
       <Container index={index}>
         <Right>
-          <Parallax tiltMaxAngleX={15} tiltMaxAngleY={15}>
+          <Parallax tiltMaxAngleX={10} tiltMaxAngleY={10}>
             <img
               src={imagePath}
               width="100%"

@@ -73,9 +73,9 @@ const AboutPage = () => {
           web-dev, particularly within the frontend domain.
           <br /> <br />
           As a developer, I'm eager to collaborate with opportunities that align
-          with my skills and vision. You can find my blogs on Medium. When I'm
-          not immersed in the digital world, I enjoy watching films, playing
-          basketball, and contemplating the complexities of existence.
+          with my skills and vision. When I'm not immersed in the digital world,
+          I enjoy watching films, playing basketball, and contemplating the
+          complexities of existence.
           <br /> <br />I believe that every endeavor becomes an art form when
           approached with mindfulness. You can reach out to me through my social
           media. I eagerly anticipate the exchange of ideas and experiences.

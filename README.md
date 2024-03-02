@@ -1,13 +1,7 @@
 # Portfolio - Shubhang Gupta 
+## [Live Here!](https://www.guptashubhang.me/)
+
 This repository contains the code for a stunning portfolio website built with React JS, Styled-Components, and Framer Motion. The website features beautiful animations and is fully responsive.
-
-## Project Features
-
-- Utilizes Styled-Components for elegant styling. Smooth animations with Framer Motion.
-- React 18's createRoot for modern rendering. Enhances loading speed with lazy loading. Seamless navigation via React Router. Font Awesome icons for visual appeal.
-- Interactive scrolling with Locomotive Scroll. Monitors web performance with Web Vitals. Captivating particle animations with react-tsparticles. Adds parallax and tilt effects for a unique experience.
-- Improved user interactions with tooltips. Integrates Chakra UI for accessibility.
-- Highly customizable for personal portfolios.
 
 ## Getting Started
 
