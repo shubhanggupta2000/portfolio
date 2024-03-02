@@ -108,10 +108,10 @@ const Card = (props) => {
           </TechStackContainer>
           <ButtonsContainer>
             <a href={hostlink}>
-              <Button>See Live</Button>
+              <Button>Check out</Button>
             </a>
             <a href={githubUrl}>
-              <Button>Github</Button>
+              <Button>Code</Button>
             </a>
           </ButtonsContainer>
         </Left>
