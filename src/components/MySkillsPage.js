@@ -91,7 +91,6 @@ const MySkillsPage = () => {
   };
 
   return (
-    // <>
     <ThemeProvider theme={lightTheme}>
       <div className="title" style={{ backgroundColor: theme1.body }}>
         My Tech Stack
@@ -163,7 +162,6 @@ const MySkillsPage = () => {
         <BigTitle text="SKILLS" top="10%" right="10%" />
       </Box>
     </ThemeProvider>
-    // </>
   );
 };
 

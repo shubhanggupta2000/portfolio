@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto;
   padding: 1rem 3rem;
-  padding-top: 2rem;
   width: fit-content;
 }
 
@@ -101,6 +100,7 @@
   .skill_icons_section {
     padding: 5px;
   }
+
   .skill_icons_section svg {
     margin: 10px;
     width: 7vw;
