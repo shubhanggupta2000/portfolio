@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto;
   padding: 1rem 3rem;
-  width: fit-content;
 }
 
 .title {
@@ -97,13 +96,20 @@
     padding: 1rem;
   }
 
+  .title {
+    font-size: 2.5em;
+    align-items: center;
+    padding-top: 12%;
+  }
+
   .skill_icons_section {
-    padding: 5px;
+    padding-bottom: 1em;
   }
 
   .skill_icons_section svg {
     margin: 10px;
     width: 7vw;
+    padding-bottom: 60%;
   }
 
   .skill_description {
