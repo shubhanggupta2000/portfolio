@@ -30,13 +30,19 @@ const Power = styled.button`
     text-decoration: none;
     color: inherit;
   }
+
+  @media (max-width: 650px) {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+  }
 `;
 
 const PowerButton = () => {
   return (
     <Power>
       <NavLink to="/">
-        <PowerBtn width={30} height={30} fill="currentColor" />
+        <PowerBtn width={20} height={20} fill="currentColor" />
       </NavLink>
     </Power>
   );

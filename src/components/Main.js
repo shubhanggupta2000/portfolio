@@ -23,6 +23,19 @@ const MainContainer = styled.div`
     font-family: "Karla", sans-serif;
     font-weight: 500;
   }
+
+  @media (max-width: 800px) {
+    .prefix__fa-yin-yang {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    h2, h3, h4, h5, h6 {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 const Container = styled.div`
@@ -43,12 +56,17 @@ const Resume = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
-  left: 8%;
+  left: 6rem;
   text-decoration: none;
   z-index: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 650px) {
+    top: 15%;
+    left: 2%
+  }
 `;
 
 const BLOG = styled(NavLink)`
@@ -154,8 +172,8 @@ const Main = () => {
         <Center click={click}>
           <YinYang
             onClick={() => handleClick()}
-            width={click ? 120 : 200}
-            height={click ? 120 : 200}
+            width={click ? 120 : window.innerWidth <= 800 ? 120 : 200}
+            height={click ? 120 : window.innerWidth <= 800 ? 120 : 200}
             fill="currentColor"
           />
           <span>click here</span>
