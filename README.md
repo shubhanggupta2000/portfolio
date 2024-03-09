@@ -15,8 +15,10 @@ Enjoy exploring and customizing this stunning portfolio website built with React
 
 ## Todo
 - [ ] Responsiveness in intro
-- [x] mobile view add in main
-- [ ] lazy loading in whole deployment
+- [ ] Mobile view in aboutpage
+- [ ] Lazy loading in whole deployment
+- [ ] Blog content addition
+- [ ] Skillpage responsiveness
 
 # Glimpse
 
