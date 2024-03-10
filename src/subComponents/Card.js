@@ -69,6 +69,10 @@ const TechStackContainer = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   padding: 20px 10px;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 const TechStackItem = styled.div`
