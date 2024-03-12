@@ -56,7 +56,7 @@ const Resume = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
-  left: 6rem;
+  left: 7.5rem;
   text-decoration: none;
   z-index: 1;
   display: flex;
