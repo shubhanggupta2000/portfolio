@@ -28,7 +28,6 @@ const Line = styled(motion.span)`
 const SocialIcons = (props) => {
   return (
     <Icons>
-      {/* changed initial [transform: "scale(0)"] to [scale: 0] */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}

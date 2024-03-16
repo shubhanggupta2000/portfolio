@@ -1,16 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React, { Suspense, lazy, useEffect, useRef } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { DarkTheme } from "./Themes";
+import { DarkTheme, mediaQueries } from "./Themes";
 import { motion } from "framer-motion";
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
 import { Work } from "../data/WorkData";
 import Card from "../subComponents/Card";
 import { YinYang } from "./AllSvgs";
-import BigTitle from "../subComponents/BigTitle";
+import Loading from "../subComponents/Loading";
 
-const Box = styled.div`
+const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
+const PowerButton = lazy(() => import("../subComponents/PowerButton"));
+const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
+const BigTitle = lazy(() => import("../subComponents/BigTitle"));
+
+const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100%;
   display: flex;
@@ -26,6 +28,24 @@ const Rotate = styled.span`
   width: 80px;
   height: 80px;
   z-index: 1;
+
+  ${mediaQueries(40)`
+    width:60px;
+    height:60px;   
+    svg{
+      width:60px;
+      height:60px;
+    }
+  `};
+
+  ${mediaQueries(25)`
+    width:50px;
+    height:50px;
+    svg{
+      width:50px;
+      height:50px;
+    }
+  `};
 `;
 
 // Framer-motion Configuration
@@ -58,16 +78,23 @@ const WorkPage = () => {
 
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
+      <Box
+        key="work"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 1 } }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      >
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <PowerButton />
 
-        <motion.div variants={container} initial="hidden" animate="show">
-          {Work.map((d) => (
-            <Card key={d.index} data={d} />
-          ))}
-        </motion.div>
+        <Suspense fallback={<Loading />}>
+          <motion.div variants={container} initial="hidden" animate="show">
+            {Work.map((d) => (
+              <Card key={d.index} data={d} />
+            ))}
+          </motion.div>
+        </Suspense>
 
         <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />

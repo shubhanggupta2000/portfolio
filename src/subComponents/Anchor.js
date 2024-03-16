@@ -64,6 +64,7 @@ const AnchorComponent = (props) => {
           return (
             <Link
               key={id}
+              style={{ padding: "0.1rem 0" }}
               width={25}
               height={25}
               fill="currentColor"

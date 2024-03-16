@@ -3,7 +3,7 @@ export const Blogs = [
   {
     id: 1,
     name: "Code in Comfort: Top VS Code Themes",
-    tags: ["vscode", "darktheme", "coder", "github", "theme"],
+    tags: ["vscode", "darktheme", "coder", "theme"],
     date: "09 Mar, 2024",
     imgSrc:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1709976950/VS_CodE_Themes_rc5g0x.png",

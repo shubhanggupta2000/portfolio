@@ -1,14 +1,19 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import styled, { keyframes, ThemeProvider } from "styled-components";
-import { DarkTheme } from "./Themes";
-import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
-import PowerButton from "../subComponents/PowerButton";
-import ParticleComponent from "../subComponents/ParticleComponent";
-import BigTitle from "../subComponents/BigTitle";
+import { DarkTheme, mediaQueries } from "./Themes";
 import astronaut from "../assets/Images/spaceman.png";
+import { motion } from "framer-motion";
+import Loading from "../subComponents/Loading";
 
-const Box = styled.div`
+const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
+const PowerButton = lazy(() => import("../subComponents/PowerButton"));
+const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
+const ParticleComponent = lazy(() =>
+  import("../subComponents/ParticleComponent")
+);
+const BigTitle = lazy(() => import("../subComponents/BigTitle"));
+
+const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
@@ -22,7 +27,7 @@ const float = keyframes`
 100% { transform: translateY(-10px) }
 `;
 
-const Spaceman = styled.div`
+const Spaceman = styled(motion.div)`
   position: absolute;
   top: 10%;
   right: 5%;
@@ -34,7 +39,7 @@ const Spaceman = styled.div`
   }
 `;
 
-const Main = styled.div`
+const Main = styled(motion.div)`
   border: 2px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};
   padding: 2rem;
@@ -52,37 +57,73 @@ const Main = styled.div`
   top: 13rem;
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
+
+  ${mediaQueries(40)`
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  `}
+
+  ${mediaQueries(30)`
+    width: 50vw;
+    height: auto
+    backdrop-filter: none;
+    margin-top: 2rem;
+  `}
+
+  ${mediaQueries(20)`
+    padding: 1rem;
+    font-size: calc(0.5rem + 1vw);
+  `}
 `;
 
 const AboutPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
-        <LogoComponent theme="dark" />
-        <SocialIcons theme="dark" />
-        <PowerButton />
-        <ParticleComponent theme="dark" />
+      <Suspense fallback={<Loading />}>
+        <Box
+          key="skills"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 0.5 } }}
+          exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        >
+          <LogoComponent theme="dark" />
+          <SocialIcons theme="dark" />
+          <PowerButton />
+          <ParticleComponent theme="dark" />
 
-        <Spaceman>
-          <img src={astronaut} alt="spaceman" />
-        </Spaceman>
+          <Spaceman
+            initial={{ right: "-20%", top: "100%" }}
+            animate={{
+              right: "5%",
+              top: "10%",
+              transition: { duration: 2, delay: 0.5 },
+            }}
+          >
+            <img src={astronaut} alt="spaceman" />
+          </Spaceman>
 
-        <Main>
-          I'm a full stack developer based in India with a passion for crafting
-          user-centric websites. My expertise covers the entire spectrum of
-          web-dev, particularly within the frontend domain.
-          <br /> <br />
-          As a developer, I'm eager to collaborate with opportunities that align
-          with my skills and vision. When I'm not immersed in the digital world,
-          I enjoy watching films, playing basketball, and contemplating the
-          complexities of existence.
-          <br /> <br />I believe that every endeavor becomes an art form when
-          approached with mindfulness. You can reach out to me through my social
-          media. I eagerly anticipate the exchange of ideas and experiences.
-        </Main>
+          <Main
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
+          >
+            I'm a full stack developer based in India with a passion for
+            crafting user-centric websites. My expertise covers the entire
+            spectrum of web-dev, particularly within the frontend domain.
+            <br /> <br />
+            I'm eager to collaborate with opportunities that align with my
+            skills and vision. When I'm not immersed in the digital world, I
+            enjoy watching films, playing basketball, and contemplating the
+            complexities of existence.
+            <br /> <br />I believe that every endeavor becomes an art form when
+            approached with mindfulness. I eagerly anticipate the exchange of
+            ideas and experiences.
+          </Main>
 
-        <BigTitle text="ABOUT" top="10%" left="5%" />
-      </Box>
+          <BigTitle text="ABOUT" top="10%" left="5%" />
+        </Box>
+      </Suspense>
     </ThemeProvider>
   );
 };
