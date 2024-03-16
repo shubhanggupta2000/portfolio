@@ -14,10 +14,10 @@ To run this project locally, follow these steps:
 Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
 
 ## Todo
-- [ ] Responsiveness in intro
-- [ ] Mobile view in aboutpage
 - [ ] Lazy loading in whole deployment
 - [ ] Skillpage responsiveness
+- [ ] Smooth page transitions
+- [ ] Main page buttons onClick design update
 
 # Glimpse
 
