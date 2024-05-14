@@ -2,6 +2,15 @@
 export const Blogs = [
   {
     id: 1,
+    name: "Silicon Valley Meets the Paddy Field: Bridging the Tech Gap in Global Agriculture",
+    tags: ["agriculture", "iot", "smart-farming", "agritech"],
+    date: "12 May, 2024",
+    imgSrc:
+      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1715706977/Indian_vs_american_farmer.png",
+    link: "https://medium.com/@guptashubhang2000/silicon-valley-meets-the-paddy-field-bridging-the-tech-gap-in-global-agriculture-cf7cfd2c2849",
+  },
+  {
+    id: 2,
     name: "Code in Comfort: Top VS Code Themes",
     tags: ["vscode", "ide", "theme"],
     date: "09 Mar, 2024",
@@ -10,7 +19,7 @@ export const Blogs = [
     link: "https://medium.com/@guptashubhang2000/code-in-comfort-top-vs-code-themes-aa1bc698761b",
   },
   {
-    id: 2,
+    id: 3,
     name: "Instagram System Design Unraveled",
     tags: ["instagram", "system-design", "cdn", "architecture"],
     date: "22 Feb, 2024",
@@ -19,7 +28,7 @@ export const Blogs = [
     link: "https://medium.com/@guptashubhang2000/instagram-system-design-unraveled-6af43bb5335e",
   },
   {
-    id: 3,
+    id: 4,
     name: "The Triad of Cloud Security: Safeguarding Data at Rest, in Transit, and in Active Use",
     tags: ["cloud", "security", "data-science", "cia", "data"],
     date: "26 Jan, 2024",
@@ -28,7 +37,7 @@ export const Blogs = [
     link: "https://medium.com/@guptashubhang2000/the-triad-of-cloud-security-safeguarding-data-at-rest-in-transit-and-in-active-use-d734e9ed4b2f",
   },
   {
-    id: 4,
+    id: 5,
     name: "Visual Mastery: Elevating github with Impactful displays",
     tags: ["react", "github", "readme"],
     date: "11 Sept, 2023",
