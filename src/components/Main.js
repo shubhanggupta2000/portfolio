@@ -320,7 +320,7 @@ const Main = () => {
           )}
 
           <Resume
-            to="https://drive.google.com/file/d/1MPT4DP0GENrT5UFr-Z_r_djn4ATPMo6l/view?usp=drive_link"
+            to="https://drive.google.com/file/d/1kWHv2tXEhGD93am74G2hfwoEWJc65foJ/view?usp=sharing"
             target="_blank"
             click={click}
           >
