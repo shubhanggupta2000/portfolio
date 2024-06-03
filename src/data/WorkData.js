@@ -34,6 +34,22 @@ export const Work = [
   },
   {
     index: 2,
+    name: "E-Bharat",
+    info: "An Indian e-commerce platform promoting locally made products. Built with ReactJS, Vite & Firebase. It offers user accounts with order tracking and an admin dashboard for product management.",
+    techStack: findIconsData([
+      "React",
+      "Redux",
+      "Firebase",
+      "Tailwind",
+      "ViteJS",
+    ]),
+    githubUrl: "https://github.com/shubhanggupta2000/firebase-ecommerce",
+    hostlink: "https://firebase-ecommerce-fazevennom.vercel.app/",
+    imagePath:
+      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1717386324/ebharat.png",
+  },
+  {
+    index: 3,
     name: "SushiMan",
     info: "A captivating Sushi ordering landing page featuring custom animations, a stylish navigation bar, and a unique hero section",
     techStack: findIconsData(["ViteJS", "Canva", "Javascript"]),
@@ -43,7 +59,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625027/ck2gj2hqtt3bsfe4okbs.png",
   },
   {
-    index: 3,
+    index: 4,
     name: "Gericht Restaurant",
     info: "A modern UI/UX restaurant landing page build with fundamental CSS properties with master flex & grid.",
     techStack: findIconsData(["React", "Javascript", "HTML", "CSS", "Axios"]),
@@ -53,7 +69,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625029/vou4msfeaeehjbncuwor.png",
   },
   {
-    index: 4,
+    index: 5,
     name: "YouTube 2.0",
     info: "A simple video streaming YouTube clone build with youtube API and MUI-5.",
     techStack: findIconsData(["React", "Material UI", "Axios", "Netlify"]),
@@ -63,7 +79,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625031/cfrp0hr81dunqm47v04s.png",
   },
   {
-    index: 5,
+    index: 6,
     name: "Closet",
     info: "An Ecommerce website with Sass and mobile first approach.",
     techStack: findIconsData([
@@ -79,17 +95,23 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625026/oujhtdvtmfk2lg1wtm76.png",
   },
   {
-    index: 6,
+    index: 7,
     name: "Shopify Gadgets",
     info: "A Sound gadget shop with stripe payment integration & confetti effects.",
-    techStack: findIconsData(["Next.js", "Javascript", "Stripe", "Babel"]),
+    techStack: findIconsData([
+      "Next.js",
+      "Sanity",
+      "EsLint",
+      "Stripe",
+      "Babel",
+    ]),
     githubUrl: "https://github.com/shubhanggupta2000/ecommerce",
     hostlink: "https://fazevennom-shoppify.vercel.app/",
     imagePath:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625028/guwuk0lekuflvhd8eto6.png",
   },
   {
-    index: 7,
+    index: 8,
     name: "Golds Gym",
     info: "Fitness app with the functionality to choose exercise categories and specific muscle groups along with motion cards GIF.",
     techStack: findIconsData([
@@ -104,7 +126,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625026/mu79mdpswechuzevxxhl.png",
   },
   {
-    index: 8,
+    index: 9,
     name: "Todo App",
     info: "A simple yet good looking todo list web-app.",
     techStack: findIconsData([
@@ -119,7 +141,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625028/gnutpx6mau9ztupwkzya.png",
   },
   {
-    index: 9,
+    index: 10,
     name: "Evolux",
     info: "A car rental website with smooth scrolling, captivating animations, and a delightful user interface.",
     techStack: findIconsData(["HTML", "CSS", "Javascript", "Vercel"]),
@@ -129,7 +151,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625026/pdz8kwh5tqqpvpsvwker.png",
   },
   {
-    index: 10,
+    index: 11,
     name: "Movies Info",
     info: "A simple web-app that provides a brief overview of any of your favourite movies.",
     techStack: findIconsData(["React", "Sass", "React Router", "Netlify"]),
@@ -139,7 +161,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625028/f6m9uylrerinpwc1ecoq.png",
   },
   {
-    index: 11,
+    index: 12,
     name: "Quiz App",
     info: "An amazing quiz application build with React & Semantic-UI that lets you play fully customized quiz in your browser.",
     techStack: findIconsData(["React", "Netlify"]),
@@ -149,7 +171,7 @@ export const Work = [
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625028/zbpum6fxvo0avriews2v.png",
   },
   {
-    index: 12,
+    index: 13,
     name: "Shoppy Dashboard",
     info: "An admin panel with Dashboard, calender with reminders and many more features.",
     techStack: findIconsData(["React", "Tailwind", "Netlify"]),

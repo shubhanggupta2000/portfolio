@@ -22,12 +22,15 @@ import {
   SiGit,
   SiGithub,
   SiUbuntu,
-  SiHeroku,
+  SiSanity,
+  // SiHeroku,
+  SiEslint,
   SiChartdotjs,
   SiNetlify,
   SiVercel,
   SiAxios,
   SiGithubactions,
+  SiScrollreveal,
   SiFigma,
   SiBabel,
   SiDjango,
@@ -43,6 +46,7 @@ import {
 import { FcLinux } from "react-icons/fc";
 import { FaSass, FaNpm, FaGitlab } from "react-icons/fa";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { IoLogoFirebase } from "react-icons/io5";
 
 const icons = [
   {
@@ -105,7 +109,7 @@ const icons = [
     name: "C++",
     icon: SiCplusplus,
     options: {
-      color: "#466fb9",
+      color: "#427FDB",
       size: "100px",
     },
   },
@@ -254,10 +258,26 @@ const icons = [
     },
   },
   {
+    name: "EsLint",
+    icon: SiEslint,
+    options: {
+      color: "#4b32c3",
+      size: "100px",
+    },
+  },
+  {
+    name: "ScrollReveal",
+    icon: SiScrollreveal,
+    options: {
+      color: "#e31d65",
+      size: "100px",
+    },
+  },
+  {
     name: "MySql",
     icon: SiMysql,
     options: {
-      color: "#61DAFB",
+      color: "#3e6e93",
       size: "100px",
     },
   },
@@ -329,7 +349,15 @@ const icons = [
     name: "ViteJS",
     icon: SiVite,
     options: {
-      color: "black",
+      color: "#305f7a",
+      size: "100px",
+    },
+  },
+  {
+    name: "Firebase",
+    icon: IoLogoFirebase,
+    options: {
+      color: "#FF8F00",
       size: "100px",
     },
   },
@@ -358,10 +386,10 @@ const icons = [
     },
   },
   {
-    name: "Heroku",
-    icon: SiHeroku,
+    name: "Sanity",
+    icon: SiSanity,
     options: {
-      color: "#6762A6",
+      color: "#f03e2f",
       size: "100px",
     },
   },
