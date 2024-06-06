@@ -23,6 +23,7 @@ Enjoy exploring and customizing this stunning portfolio website built with React
 
 # Glimpse
 
-![1](https://github.com/shubhanggupta2000/portfolio/assets/79959361/7af1293c-3d30-420a-85f8-d321ef97f413)
-![2](https://github.com/shubhanggupta2000/portfolio/assets/79959361/fdd6199d-45e9-4c72-ac63-d399c4bd80d1)
-![3](https://github.com/shubhanggupta2000/portfolio/assets/79959361/453aafed-bf4f-48a3-a106-bf10b43fad8a)
+
+![1](https://github.com/shubhanggupta2000/portfolio/assets/79959361/10ce6ccf-35c2-487a-8ec2-7b5660f94713)
+![2](https://github.com/shubhanggupta2000/portfolio/assets/79959361/cc0a8520-32b1-4a94-9f84-7bcd4e2c43bb)
+![3](https://github.com/shubhanggupta2000/portfolio/assets/79959361/2bd809c9-d5d0-48b6-9aa9-ae2f2257e1bc)
