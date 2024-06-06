@@ -5,9 +5,8 @@ import {
   SiGraphql,
   SiJavascript,
   SiC,
-  SiCplusplus,
   SiMui,
-  SiPython,
+  SiBabel,
   SiSolidity,
   SiHtml5,
   SiCss3,
@@ -16,26 +15,20 @@ import {
   SiTailwindcss,
   SiCanva,
   SiNodedotjs,
-  SiMysql,
   SiMongodb,
   SiPostman,
   SiGit,
   SiGithub,
   SiUbuntu,
   SiSanity,
-  // SiHeroku,
   SiEslint,
   SiChartdotjs,
   SiNetlify,
   SiVercel,
   SiAxios,
   SiGithubactions,
-  SiScrollreveal,
-  SiFigma,
-  SiBabel,
   SiDjango,
   SiExpress,
-  SiAntdesign,
   SiJupyter,
   SiNodemon,
   SiReactrouter,
@@ -47,53 +40,45 @@ import { FcLinux } from "react-icons/fc";
 import { FaSass, FaNpm, FaGitlab } from "react-icons/fa";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { IoLogoFirebase } from "react-icons/io5";
+import {
+  Figma,
+  Antd,
+  Cplusplus,
+  Python,
+  Mysql,
+  ScrollReveal,
+} from "../components/AllSvgs";
 
 const icons = [
   {
-    name: "React",
-    icon: SiReact,
+    name: "Ant Design",
+    icon: Antd,
     options: {
-      color: "#7cc5d9",
+      color: "#0170FE",
       size: "100px",
     },
   },
   {
-    name: "Redux",
-    icon: SiRedux,
+    name: "Axios",
+    icon: SiAxios,
     options: {
-      color: "#764abc",
+      color: "#5a29e4",
       size: "100px",
     },
   },
   {
-    name: "Canva",
-    icon: SiCanva,
+    name: "Babel",
+    icon: SiBabel,
     options: {
-      color: "#20c4cb",
+      color: "#F9DC3E",
       size: "100px",
     },
   },
   {
-    name: "Next.js",
-    icon: SiNextdotjs,
+    name: "Bootstrap",
+    icon: SiBootstrap,
     options: {
-      color: "#000000",
-      size: "100px",
-    },
-  },
-  {
-    name: "Graphql",
-    icon: SiGraphql,
-    options: {
-      color: "#e535ab",
-      size: "100px",
-    },
-  },
-  {
-    name: "Javascript",
-    icon: SiJavascript,
-    options: {
-      color: "#F0DB4F",
+      color: "#7952B3",
       size: "100px",
     },
   },
@@ -107,33 +92,9 @@ const icons = [
   },
   {
     name: "C++",
-    icon: SiCplusplus,
+    icon: Cplusplus,
     options: {
       color: "#427FDB",
-      size: "100px",
-    },
-  },
-  {
-    name: "Python",
-    icon: SiPython,
-    options: {
-      color: "#4B8BBE",
-      size: "100px",
-    },
-  },
-  {
-    name: "Solidity",
-    icon: SiSolidity,
-    options: {
-      color: "#000000",
-      size: "100px",
-    },
-  },
-  {
-    name: "HTML",
-    icon: SiHtml5,
-    options: {
-      color: "#E34C26",
       size: "100px",
     },
   },
@@ -146,42 +107,10 @@ const icons = [
     },
   },
   {
-    name: "Three.js",
-    icon: SiThreedotjs,
+    name: "Canva",
+    icon: SiCanva,
     options: {
-      color: "#000000",
-      size: "100px",
-    },
-  },
-  {
-    name: "Sass",
-    icon: FaSass,
-    options: {
-      color: "#CD6799",
-      size: "100px",
-    },
-  },
-  {
-    name: "Stripe",
-    icon: SiStripe,
-    options: {
-      color: "#635bff",
-      size: "100px",
-    },
-  },
-  {
-    name: "Material UI",
-    icon: SiMui,
-    options: {
-      color: "#007FFF",
-      size: "100px",
-    },
-  },
-  {
-    name: "Framer Motion",
-    icon: TbBrandFramerMotion,
-    options: {
-      color: "#000000",
+      color: "#20c4cb",
       size: "100px",
     },
   },
@@ -194,22 +123,6 @@ const icons = [
     },
   },
   {
-    name: "Tailwind",
-    icon: SiTailwindcss,
-    options: {
-      color: "#61DAFB",
-      size: "100px",
-    },
-  },
-  {
-    name: "Ant Design",
-    icon: SiAntdesign,
-    options: {
-      color: "#0170FE",
-      size: "100px",
-    },
-  },
-  {
     name: "ChartJS",
     icon: SiChartdotjs,
     options: {
@@ -218,42 +131,10 @@ const icons = [
     },
   },
   {
-    name: "Jupyter Lab",
-    icon: SiJupyter,
+    name: "Django",
+    icon: SiDjango,
     options: {
-      color: "#F37626",
-      size: "100px",
-    },
-  },
-  {
-    name: "Nodemon",
-    icon: SiNodemon,
-    options: {
-      color: "#76D04B",
-      size: "100px",
-    },
-  },
-  {
-    name: "React Router",
-    icon: SiReactrouter,
-    options: {
-      color: "#CA4245",
-      size: "100px",
-    },
-  },
-  {
-    name: "Node.js",
-    icon: SiNodedotjs,
-    options: {
-      color: "#68A063",
-      size: "100px",
-    },
-  },
-  {
-    name: "Npm",
-    icon: FaNpm,
-    options: {
-      color: "#d63031",
+      color: "#000000",
       size: "100px",
     },
   },
@@ -266,90 +147,17 @@ const icons = [
     },
   },
   {
-    name: "ScrollReveal",
-    icon: SiScrollreveal,
-    options: {
-      color: "#e31d65",
-      size: "100px",
-    },
-  },
-  {
-    name: "MySql",
-    icon: SiMysql,
-    options: {
-      color: "#3e6e93",
-      size: "100px",
-    },
-  },
-  {
-    name: "Mongodb",
-    icon: SiMongodb,
-    options: {
-      color: "#4DB33D",
-      size: "100px",
-    },
-  },
-  {
-    name: "Postman",
-    icon: SiPostman,
-    options: {
-      color: "#EF5B25",
-      size: "100px",
-    },
-  },
-  {
-    name: "Git",
-    icon: SiGit,
-    options: {
-      color: "#F1502F",
-      size: "100px",
-    },
-  },
-  {
-    name: "Github",
-    icon: SiGithub,
+    name: "Express",
+    icon: SiExpress,
     options: {
       color: "#000000",
       size: "100px",
     },
   },
   {
-    name: "GitLab",
-    icon: FaGitlab,
+    name: "Figma",
+    icon: Figma,
     options: {
-      color: "#fca326",
-      size: "100px",
-    },
-  },
-  {
-    name: "Github Actions",
-    icon: SiGithubactions,
-    options: {
-      color: "#4183C4",
-      size: "100px",
-    },
-  },
-  {
-    name: "Vercel",
-    icon: SiVercel,
-    options: {
-      color: "#000000",
-      size: "100px",
-    },
-  },
-  {
-    name: "Axios",
-    icon: SiAxios,
-    options: {
-      color: "#2596be",
-      size: "100px",
-    },
-  },
-  {
-    name: "ViteJS",
-    icon: SiVite,
-    options: {
-      color: "#305f7a",
       size: "100px",
     },
   },
@@ -362,16 +170,240 @@ const icons = [
     },
   },
   {
-    name: "Bootstrap",
-    icon: SiBootstrap,
+    name: "Framer Motion",
+    icon: TbBrandFramerMotion,
     options: {
-      color: "#7952B3",
+      color: "#000000",
+      size: "100px",
+    },
+  },
+  {
+    name: "Git",
+    icon: SiGit,
+    options: {
+      color: "#F1502F",
+      size: "100px",
+    },
+  },
+  {
+    name: "GitLab",
+    icon: FaGitlab,
+    options: {
+      color: "#fca326",
+      size: "100px",
+    },
+  },
+  {
+    name: "Github",
+    icon: SiGithub,
+    options: {
+      color: "#000000",
+      size: "100px",
+    },
+  },
+  {
+    name: "Github Actions",
+    icon: SiGithubactions,
+    options: {
+      color: "#4183C4",
+      size: "100px",
+    },
+  },
+  {
+    name: "Graphql",
+    icon: SiGraphql,
+    options: {
+      color: "#e535ab",
+      size: "100px",
+    },
+  },
+  {
+    name: "HTML",
+    icon: SiHtml5,
+    options: {
+      color: "#E34C26",
+      size: "100px",
+    },
+  },
+  {
+    name: "Javascript",
+    icon: SiJavascript,
+    options: {
+      color: "#F0DB4F",
+      size: "100px",
+    },
+  },
+  {
+    name: "Jupyter Lab",
+    icon: SiJupyter,
+    options: {
+      color: "#F37626",
       size: "100px",
     },
   },
   {
     name: "Linux",
     icon: FcLinux,
+    options: {
+      color: "#000000",
+      size: "100px",
+    },
+  },
+  {
+    name: "Material UI",
+    icon: SiMui,
+    options: {
+      color: "#007FFF",
+      size: "100px",
+    },
+  },
+  {
+    name: "Mongodb",
+    icon: SiMongodb,
+    options: {
+      color: "#4DB33D",
+      size: "100px",
+    },
+  },
+  {
+    name: "MySql",
+    icon: Mysql,
+    options: {
+      color: "#3e6e93",
+      size: "100px",
+    },
+  },
+  {
+    name: "Netlify",
+    icon: SiNetlify,
+    options: {
+      color: "#00c7b7",
+      size: "100px",
+    },
+  },
+  {
+    name: "Next.js",
+    icon: SiNextdotjs,
+    options: {
+      color: "#000000",
+      size: "100px",
+    },
+  },
+  {
+    name: "Node.js",
+    icon: SiNodedotjs,
+    options: {
+      color: "#68A063",
+      size: "100px",
+    },
+  },
+  {
+    name: "Nodemon",
+    icon: SiNodemon,
+    options: {
+      color: "#76D04B",
+      size: "100px",
+    },
+  },
+  {
+    name: "Npm",
+    icon: FaNpm,
+    options: {
+      color: "#d63031",
+      size: "100px",
+    },
+  },
+  {
+    name: "Postman",
+    icon: SiPostman,
+    options: {
+      color: "#EF5B25",
+      size: "100px",
+    },
+  },
+  {
+    name: "Python",
+    icon: Python,
+    options: {
+      color: "#4B8BBE",
+      size: "100px",
+    },
+  },
+  {
+    name: "React",
+    icon: SiReact,
+    options: {
+      color: "#7cc5d9",
+      size: "100px",
+    },
+  },
+  {
+    name: "React Router",
+    icon: SiReactrouter,
+    options: {
+      color: "#CA4245",
+      size: "100px",
+    },
+  },
+  {
+    name: "Redux",
+    icon: SiRedux,
+    options: {
+      color: "#764abc",
+      size: "100px",
+    },
+  },
+  {
+    name: "Sanity",
+    icon: SiSanity,
+    options: {
+      color: "#f03e2f",
+      size: "100px",
+    },
+  },
+  {
+    name: "Sass",
+    icon: FaSass,
+    options: {
+      color: "#CD6799",
+      size: "100px",
+    },
+  },
+  {
+    name: "ScrollReveal",
+    icon: ScrollReveal,
+    options: {
+      color: "#e31d65",
+      size: "100px",
+    },
+  },
+  {
+    name: "Solidity",
+    icon: SiSolidity,
+    options: {
+      color: "#000000",
+      size: "100px",
+    },
+  },
+  {
+    name: "Stripe",
+    icon: SiStripe,
+    options: {
+      color: "#635bff",
+      size: "100px",
+    },
+  },
+  {
+    name: "Tailwind",
+    icon: SiTailwindcss,
+    options: {
+      color: "#61DAFB",
+      size: "100px",
+    },
+  },
+  {
+    name: "Three.js",
+    icon: SiThreedotjs,
     options: {
       color: "#000000",
       size: "100px",
@@ -386,58 +418,18 @@ const icons = [
     },
   },
   {
-    name: "Sanity",
-    icon: SiSanity,
-    options: {
-      color: "#f03e2f",
-      size: "100px",
-    },
-  },
-  {
-    name: "Netlify",
-    icon: SiNetlify,
-    options: {
-      color: "#00c7b7",
-      size: "100px",
-    },
-  },
-  {
-    name: "Babel",
-    icon: SiBabel,
-    options: {
-      color: "#F9DC3E",
-      size: "100px",
-    },
-  },
-  // {
-  //   name: "Google Cloud Platform",
-  //   icon: SiGooglecloud,
-  //   options: {
-  //     color: "#4285F4",
-  //     size: "100px",
-  //   },
-  // },
-  {
-    name: "Django",
-    icon: SiDjango,
+    name: "Vercel",
+    icon: SiVercel,
     options: {
       color: "#000000",
       size: "100px",
     },
   },
   {
-    name: "Figma",
-    icon: SiFigma,
+    name: "ViteJS",
+    icon: SiVite,
     options: {
-      color: "#0984e3",
-      size: "100px",
-    },
-  },
-  {
-    name: "Express",
-    icon: SiExpress,
-    options: {
-      color: "#000000",
+      color: "#305f7a",
       size: "100px",
     },
   },
