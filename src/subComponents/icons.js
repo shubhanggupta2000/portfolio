@@ -4,7 +4,6 @@ import {
   SiNextdotjs,
   SiGraphql,
   SiJavascript,
-  SiC,
   SiMui,
   SiBabel,
   SiSolidity,
@@ -47,6 +46,7 @@ import {
   Python,
   Mysql,
   ScrollReveal,
+  C_lang,
 } from "../components/AllSvgs";
 
 const icons = [
@@ -84,7 +84,7 @@ const icons = [
   },
   {
     name: "C",
-    icon: SiC,
+    icon: C_lang,
     options: {
       color: "",
       size: "100px",
