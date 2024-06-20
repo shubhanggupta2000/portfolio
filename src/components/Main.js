@@ -51,12 +51,12 @@ const Contact = styled(NavLink)`
   z-index: 1;
 
   @media only screen and (max-width: 50em) {
-    color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+    color: ${(props) => (props.$click ? props.theme.body : props.theme.text)};
   }
 `;
 
 const Resume = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.$click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 2rem;
   left: 7.5rem;
@@ -82,13 +82,13 @@ const BLOG = styled(NavLink)`
   z-index: 1;
 
   @media only screen and (max-width: 50em) {
-    text-shadow: ${(props) => (props.click ? "0 0 4px #000" : "none")};
-    color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+    text-shadow: ${(props) => (props.$click ? "0 0 4px #000" : "none")};
+    color: ${(props) => (props.$click ? props.theme.body : props.theme.text)};
   }
 `;
 
 const WORK = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.$click ? props.theme.body : props.theme.text)};
   position: absolute;
   top: 50%;
   left: calc(1rem + 2vw);
@@ -97,7 +97,7 @@ const WORK = styled(NavLink)`
   z-index: 1;
 
   @media only screen and (max-width: 50em) {
-    text-shadow: ${(props) => (props.click ? "0 0 4px #000" : "none")};
+    text-shadow: ${(props) => (props.$click ? "0 0 4px #000" : "none")};
   }
 `;
 
@@ -112,7 +112,7 @@ const BottomBar = styled.div`
 `;
 
 const ABOUT = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => (props.$click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
 
@@ -137,8 +137,8 @@ to {
 
 const Center = styled.button`
   position: absolute;
-  top: ${(props) => (props.click ? "85%" : "50%")};
-  left: ${(props) => (props.click ? "92%" : "50%")};
+  top: ${(props) => (props.$click ? "85%" : "50%")};
+  left: ${(props) => (props.$click ? "92%" : "50%")};
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -155,19 +155,19 @@ const Center = styled.button`
   }
 
   & > :last-child {
-    display: ${(props) => (props.click ? "none" : "inline-block")};
+    display: ${(props) => (props.$click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
 
   @media only screen and (max-width: 50em) {
-    top: ${(props) => (props.click ? "90%" : "50%")};
-    left: ${(props) => (props.click ? "90%" : "50%")};
-    width: ${(props) => (props.click ? "80px" : "150px")};
-    height: ${(props) => (props.click ? "80px" : "150px")};
+    top: ${(props) => (props.$click ? "90%" : "50%")};
+    left: ${(props) => (props.$click ? "90%" : "50%")};
+    width: ${(props) => (props.$click ? "80px" : "150px")};
+    height: ${(props) => (props.$click ? "80px" : "150px")};
   }
   @media only screen and (max-width: 30em) {
-    width: ${(props) => (props.click ? "40px" : "150px")};
-    height: ${(props) => (props.click ? "40px" : "150px")};
+    width: ${(props) => (props.$click ? "40px" : "150px")};
+    height: ${(props) => (props.$click ? "40px" : "150px")};
   }
 `;
 
@@ -176,14 +176,14 @@ const DarkDiv = styled.div`
   top: 0;
   bottom: 0;
   right: 50%;
-  width: ${(props) => (props.click ? "50%" : "0%")};
+  width: ${(props) => (props.$click ? "50%" : "0%")};
   background-color: #000000;
-  height: ${(props) => (props.click ? "100%" : "0%")};
+  height: ${(props) => (props.$click ? "100%" : "0%")};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
 
   ${(props) =>
-    props.click
+    props.$click
       ? mediaQueries(50)`
       height: 50%;
       right: 0;
@@ -218,7 +218,7 @@ const Main = () => {
         exit={path === "about" || path === "skills" ? moveY : moveX}
         transition={{ duration: 0.5 }}
       >
-        <DarkDiv click={click} />
+        <DarkDiv $click={click} />
         <Container>
           <PowerButton />
           <LogoComponent theme={click ? "dark" : "light"} />
@@ -228,7 +228,7 @@ const Main = () => {
             <SocialIcons theme={click ? "dark" : "light"} />
           )}
 
-          <Center click={click}>
+          <Center $click={click}>
             {mq ? (
               <YinYang
                 onClick={() => handleClick()}
@@ -248,7 +248,7 @@ const Main = () => {
           </Center>
 
           {mq ? (
-            <Contact click={click} to="/contact">
+            <Contact $click={click} to="/contact">
               <motion.h2
                 initial={{
                   y: -200,
@@ -265,7 +265,7 @@ const Main = () => {
               </motion.h2>
             </Contact>
           ) : (
-            <Contact click={+false} to="/contact">
+            <Contact $click={+false} to="/contact">
               <motion.h2
                 initial={{
                   y: -200,
@@ -284,7 +284,7 @@ const Main = () => {
           )}
 
           {mq ? (
-            <BLOG click={+click} onClick={() => setpath("blog")} to="/blog">
+            <BLOG $click={+click} onClick={() => setpath("blog")} to="/blog">
               <motion.h2
                 initial={{
                   y: -200,
@@ -301,7 +301,7 @@ const Main = () => {
               </motion.h2>
             </BLOG>
           ) : (
-            <BLOG click={+false} onClick={() => setpath("blog")} to="/blog">
+            <BLOG $click={+false} onClick={() => setpath("blog")} to="/blog">
               <motion.h2
                 initial={{
                   y: -200,
@@ -320,9 +320,9 @@ const Main = () => {
           )}
 
           <Resume
-            to="https://drive.google.com/file/d/1kWHv2tXEhGD93am74G2hfwoEWJc65foJ/view?usp=sharing"
+            to="https://drive.google.com/file/d/1qsGHAfrbL5p4u0nKJV5XEYOXgyrM8Wp4/view?usp=drive_link"
             target="_blank"
-            click={click}
+            $click={click}
           >
             <motion.h2
               initial={{
@@ -341,7 +341,7 @@ const Main = () => {
             </motion.h2>
           </Resume>
 
-          <WORK to="/work" click={click}>
+          <WORK to="/work" $click={click}>
             <motion.h2
               onClick={() => setpath("work")}
               initial={{
@@ -361,7 +361,7 @@ const Main = () => {
           <BottomBar>
             <ABOUT
               onClick={() => setClick(false)}
-              click={mq ? +false : +click}
+              $click={mq ? +false : +click}
               to="/about"
             >
               <motion.h2
