@@ -229,7 +229,7 @@ const MySkillsPage = () => {
             </Description>
           </Main>
 
-          <BigTitle text="SKILLS" top="10%" right="10%" />
+          <BigTitle text="SKILLS" $top="10%" $right="10%" />
         </Box>
       </Suspense>
     </ThemeProvider>

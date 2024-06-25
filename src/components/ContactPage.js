@@ -291,7 +291,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <BigTitle text="CONTACT" top="10%" left="8%" />
+          <BigTitle text="CONTACT" $top="10%" $left="8%" />
         </Container>
       </MainBox>
     </ThemeProvider>

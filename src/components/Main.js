@@ -211,163 +211,123 @@ const Main = () => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <MainContainer
+      <motion.div
         key="modal"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={path === "about" || path === "skills" ? moveY : moveX}
         transition={{ duration: 0.5 }}
       >
-        <DarkDiv $click={click} />
-        <Container>
-          <PowerButton />
-          <LogoComponent theme={click ? "dark" : "light"} />
-          {mq ? (
-            <SocialIcons theme="light" />
-          ) : (
-            <SocialIcons theme={click ? "dark" : "light"} />
-          )}
-
-          <Center $click={click}>
+        <MainContainer>
+          <DarkDiv $click={click} />
+          <Container>
+            <PowerButton />
+            <LogoComponent theme={click ? "dark" : "light"} />
             {mq ? (
-              <YinYang
-                onClick={() => handleClick()}
-                width={click ? 80 : 150}
-                height={click ? 80 : 150}
-                fill="currentColor"
-              />
+              <SocialIcons theme="light" />
             ) : (
-              <YinYang
-                onClick={() => handleClick()}
-                width={click ? 120 : 200}
-                height={click ? 120 : 200}
-                fill="currentColor"
-              />
+              <SocialIcons theme={click ? "dark" : "light"} />
             )}
-            <span>click here</span>
-          </Center>
 
-          {mq ? (
-            <Contact $click={click} to="/contact">
-              <motion.h2
-                initial={{
-                  y: -200,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                animate={{
-                  y: 0,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Contact Me
-              </motion.h2>
-            </Contact>
-          ) : (
-            <Contact $click={+false} to="/contact">
-              <motion.h2
-                initial={{
-                  y: -200,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                animate={{
-                  y: 0,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Contact Me
-              </motion.h2>
-            </Contact>
-          )}
+            <Center $click={click}>
+              {mq ? (
+                <YinYang
+                  onClick={() => handleClick()}
+                  width={click ? 80 : 150}
+                  height={click ? 80 : 150}
+                  fill="currentColor"
+                />
+              ) : (
+                <YinYang
+                  onClick={() => handleClick()}
+                  width={click ? 120 : 200}
+                  height={click ? 120 : 200}
+                  fill="currentColor"
+                />
+              )}
+              <span>click here</span>
+            </Center>
 
-          {mq ? (
-            <BLOG $click={+click} onClick={() => setpath("blog")} to="/blog">
-              <motion.h2
-                initial={{
-                  y: -200,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                animate={{
-                  y: 0,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Blog
-              </motion.h2>
-            </BLOG>
-          ) : (
-            <BLOG $click={+false} onClick={() => setpath("blog")} to="/blog">
-              <motion.h2
-                initial={{
-                  y: -200,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                animate={{
-                  y: 0,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Blog
-              </motion.h2>
-            </BLOG>
-          )}
+            {mq ? (
+              <Contact $click={click} to="/contact">
+                <motion.h2
+                  initial={{
+                    y: -200,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  animate={{
+                    y: 0,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Contact Me
+                </motion.h2>
+              </Contact>
+            ) : (
+              <Contact $click={+false} to="/contact">
+                <motion.h2
+                  initial={{
+                    y: -200,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  animate={{
+                    y: 0,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Contact Me
+                </motion.h2>
+              </Contact>
+            )}
 
-          <Resume
-            to="https://drive.google.com/file/d/1qsGHAfrbL5p4u0nKJV5XEYOXgyrM8Wp4/view?usp=drive_link"
-            target="_blank"
-            $click={click}
-          >
-            <motion.h2
-              initial={{
-                y: -200,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              animate={{
-                y: 0,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <BiSolidDownload size={24} style={{ verticalAlign: "middle" }} />{" "}
-              Resume
-            </motion.h2>
-          </Resume>
+            {mq ? (
+              <BLOG $click={+click} onClick={() => setpath("blog")} to="/blog">
+                <motion.h2
+                  initial={{
+                    y: -200,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  animate={{
+                    y: 0,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Blog
+                </motion.h2>
+              </BLOG>
+            ) : (
+              <BLOG $click={+false} onClick={() => setpath("blog")} to="/blog">
+                <motion.h2
+                  initial={{
+                    y: -200,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  animate={{
+                    y: 0,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Blog
+                </motion.h2>
+              </BLOG>
+            )}
 
-          <WORK to="/work" $click={click}>
-            <motion.h2
-              onClick={() => setpath("work")}
-              initial={{
-                y: -200,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              animate={{
-                y: 0,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Work
-            </motion.h2>
-          </WORK>
-          <BottomBar>
-            <ABOUT
-              onClick={() => setClick(false)}
-              $click={mq ? +false : +click}
-              to="/about"
+            <Resume
+              to="https://drive.google.com/file/d/1qsGHAfrbL5p4u0nKJV5XEYOXgyrM8Wp4/view?usp=drive_link"
+              target="_blank"
+              $click={click}
             >
               <motion.h2
-                onClick={() => setpath("about")}
                 initial={{
-                  y: 200,
+                  y: -200,
                   transition: { type: "spring", duration: 1.5, delay: 1 },
                 }}
                 animate={{
@@ -377,15 +337,19 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                About
+                <BiSolidDownload
+                  size={24}
+                  style={{ verticalAlign: "middle" }}
+                />{" "}
+                Resume
               </motion.h2>
-            </ABOUT>
+            </Resume>
 
-            <SKILLS to="/skills">
+            <WORK to="/work" $click={click}>
               <motion.h2
-                onClick={() => setpath("skills")}
+                onClick={() => setpath("work")}
                 initial={{
-                  y: 200,
+                  y: -200,
                   transition: { type: "spring", duration: 1.5, delay: 1 },
                 }}
                 animate={{
@@ -395,13 +359,54 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                My Skillset
+                Work
               </motion.h2>
-            </SKILLS>
-          </BottomBar>
-        </Container>
-        {click ? <Intro click={click} /> : null}
-      </MainContainer>
+            </WORK>
+            <BottomBar>
+              <ABOUT
+                onClick={() => setClick(false)}
+                $click={mq ? +false : +click}
+                to="/about"
+              >
+                <motion.h2
+                  onClick={() => setpath("about")}
+                  initial={{
+                    y: 200,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  animate={{
+                    y: 0,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  About
+                </motion.h2>
+              </ABOUT>
+
+              <SKILLS to="/skills">
+                <motion.h2
+                  onClick={() => setpath("skills")}
+                  initial={{
+                    y: 200,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  animate={{
+                    y: 0,
+                    transition: { type: "spring", duration: 1.5, delay: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  My Skillset
+                </motion.h2>
+              </SKILLS>
+            </BottomBar>
+          </Container>
+          {click ? <Intro click={click} /> : null}
+        </MainContainer>
+      </motion.div>
     </Suspense>
   );
 };

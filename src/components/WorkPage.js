@@ -100,7 +100,7 @@ const WorkPage = () => {
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
 
-        <BigTitle text="PROJECTS" top="10%" right="10%" />
+        <BigTitle text="PROJECTS" $top="10%" $right="10%" />
       </Box>
     </ThemeProvider>
   );

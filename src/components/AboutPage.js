@@ -121,7 +121,7 @@ const AboutPage = () => {
             ideas and experiences.
           </Main>
 
-          <BigTitle text="ABOUT" top="10%" left="5%" />
+          <BigTitle text="ABOUT" $top="70%" $left="10%" />
         </Box>
       </Suspense>
     </ThemeProvider>

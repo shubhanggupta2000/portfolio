@@ -8,7 +8,7 @@ const MainContainer = styled.div`
 
 const Container = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.index % 2 === 0 ? "row-reverse" : "row")};
+  flex-direction: ${(props) => (props.$index % 2 === 0 ? "row-reverse" : "row")};
   height: fit-content;
   width: 100%;
   color: white;
@@ -87,7 +87,7 @@ const Card = (props) => {
     props.data;
   return (
     <MainContainer>
-      <Container index={index}>
+      <Container $index={index}>
         <Right>
           <Parallax tiltMaxAngleX={10} tiltMaxAngleY={10}>
             <img

@@ -96,7 +96,7 @@ const BlogPage = () => {
             </Grid>
           </Center>
 
-          <BigTitle text="BLOGS" top="5rem" left="5rem" />
+          <BigTitle text="BLOGS" $top="5rem" $left="5rem" />
         </Container>
       </MainContainer>
     </Suspense>
