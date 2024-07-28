@@ -13,7 +13,7 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   // Your location coordinates
-  const position = [26.966690170258314, 75.77583110166965];
+  const position = [26.249449366949783, 78.16994892140436];
 
   // Function to open location in a new tab when marker is clicked
   const openLocationInNewTab = () => {
