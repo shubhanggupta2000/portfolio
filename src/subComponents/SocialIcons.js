@@ -56,7 +56,7 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           rel="noreferrer"
-          href="https://www.linkedin.com/in/shubhang-gupta-a081ab201/"
+          href="https://www.linkedin.com/in/gupta-shubhang/"
         >
           <Linkedin
             width={25}

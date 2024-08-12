@@ -100,7 +100,7 @@ const socialMediaIcons = [
 const ContactPage = () => {
   const socialMediaLinks = {
     github: "https://github.com/shubhanggupta2000",
-    linkedin: "https://www.linkedin.com/in/shubhang-gupta-a081ab201/",
+    linkedin: "https://www.linkedin.com/in/gupta-shubhang/",
     medium: "https://medium.com/@guptashubhang2000",
     twitter: "https://twitter.com/ShubhangGupta13",
     quora: "https://www.quora.com/profile/Shubhang-Gupta-31",

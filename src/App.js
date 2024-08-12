@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import GlobalStyle from "./globalStyles";
 import { Suspense, lazy } from "react";
 import Loading from "./subComponents/Loading";
+import BlogPost from "./components/BlogPost";
 
 // Components (using lazy loading)
 const Main = lazy(() => import("./components/Main"));
@@ -54,6 +55,14 @@ function App() {
                   </Suspense>
                 }
               />
+              <Route
+                path="/blog/:slug"
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <BlogPost />
+                  </Suspense>
+                }
+              />{" "}
               <Route
                 path="/work"
                 element={

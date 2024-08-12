@@ -8,6 +8,8 @@ export const Blogs = [
     imgSrc:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1715706977/Indian_vs_american_farmer.png",
     link: "https://medium.com/@guptashubhang2000/silicon-valley-meets-the-paddy-field-bridging-the-tech-gap-in-global-agriculture-cf7cfd2c2849",
+    content:
+      "This is where the full blog post content would go. For now, we're displaying a placeholder.",
   },
   {
     id: 2,
@@ -17,6 +19,8 @@ export const Blogs = [
     imgSrc:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1709976950/VS_CodE_Themes_rc5g0x.png",
     link: "https://medium.com/@guptashubhang2000/code-in-comfort-top-vs-code-themes-aa1bc698761b",
+    content:
+      "This is where the full blog post content would go. For now, we're displaying a placeholder.",
   },
   {
     id: 3,
@@ -26,6 +30,8 @@ export const Blogs = [
     imgSrc:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1708590447/tcwdbe6g1rkyq6tqptro.png",
     link: "https://medium.com/@guptashubhang2000/instagram-system-design-unraveled-6af43bb5335e",
+    content:
+      "This is where the full blog post content would go. For now, we're displaying a placeholder.",
   },
   {
     id: 4,
@@ -35,6 +41,8 @@ export const Blogs = [
     imgSrc:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1708590447/sqrhmdtm1max3l366je8.png",
     link: "https://medium.com/@guptashubhang2000/the-triad-of-cloud-security-safeguarding-data-at-rest-in-transit-and-in-active-use-d734e9ed4b2f",
+    content:
+      "This is where the full blog post content would go. For now, we're displaying a placeholder.",
   },
   {
     id: 5,
@@ -44,5 +52,7 @@ export const Blogs = [
     imgSrc:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1708590448/ptjvr6j3cddzxpqzayjg.png",
     link: "https://medium.com/@guptashubhang2000/visual-mastery-elevating-github-with-impactful-displays-8abbea39d022",
+    content:
+      "This is where the full blog post content would go. For now, we're displaying a placeholder.",
   },
 ];
