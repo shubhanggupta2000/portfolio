@@ -31,6 +31,7 @@ import {
   SiJupyter,
   SiNodemon,
   SiReactrouter,
+  SiTypescript,
   SiVite,
   SiBootstrap,
   SiStripe,
@@ -406,6 +407,14 @@ const icons = [
     icon: SiThreedotjs,
     options: {
       color: "#000000",
+      size: "100px",
+    },
+  },
+  {
+    name: "Typescript",
+    icon: SiTypescript,
+    options: {
+      color: "#2f74c0",
       size: "100px",
     },
   },
