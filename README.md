@@ -1,6 +1,6 @@
 # Portfolio - Shubhang Gupta
 
-## [Live Here!](https://www.guptashubhang.me/)
+## [Live Here!](https://www.guptashubhang.tech/)
 
 This repository contains the code for a stunning portfolio website built with React JS, Styled-Components, and Framer Motion. The website features beautiful animations applied using framer-motion.
 
