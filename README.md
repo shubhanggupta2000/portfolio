@@ -14,6 +14,12 @@ To run this project locally, follow these steps:
 
 Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
 
+## Todo
+
+- [ ] Skillpage responsiveness
+- [ ] Smooth page transitions
+- [ ] Blog opening in the portfolio website only
+
 # Glimpse
 
 ![1](https://github.com/shubhanggupta2000/portfolio/assets/79959361/10ce6ccf-35c2-487a-8ec2-7b5660f94713)
