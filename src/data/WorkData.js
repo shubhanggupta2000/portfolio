@@ -27,7 +27,7 @@ export const Work = [
     githubUrl: "https://github.com/shubhanggupta2000/zentry",
     hostlink: "https://zentry-nine.vercel.app/",
     imagePath:
-      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1733117512/zentry.png",
+      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1734635613/zentry.png",
   },
   {
     index: 2,
@@ -80,7 +80,7 @@ export const Work = [
     githubUrl: "https://github.com/shubhanggupta2000/Restaurant_UI",
     hostlink: "https://fazevennom-gericht.netlify.app/",
     imagePath:
-      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625029/vou4msfeaeehjbncuwor.png",
+      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1734635267/gericht.png",
   },
   {
     index: 6,
@@ -166,13 +166,13 @@ export const Work = [
   },
   {
     index: 12,
-    name: "Movies Info",
-    info: "A simple web-app that provides a brief overview of any of your favourite movies.",
-    techStack: findIconsData(["React", "Sass", "React Router", "Netlify"]),
+    name: "Faze Films",
+    info: "A simple web-app that provides ratings, description of a wide range of television content.",
+    techStack: findIconsData(["React", "Sass", "React Router", "Vercel"]),
     githubUrl: "https://github.com/shubhanggupta2000/movies-info",
-    hostlink: "https://fazevennom-movies-info.netlify.app/",
+    hostlink: "https://faze-movies-info.vercel.app/",
     imagePath:
-      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1696625028/f6m9uylrerinpwc1ecoq.png",
+      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1734635387/fazefilms.png",
   },
   {
     index: 13,
