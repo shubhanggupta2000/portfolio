@@ -19,6 +19,7 @@ import {
   SiGit,
   SiGithub,
   SiUbuntu,
+  SiShadcnui,
   SiSanity,
   SiEslint,
   SiChartdotjs,
@@ -35,6 +36,7 @@ import {
   SiVite,
   SiBootstrap,
   SiStripe,
+  SiAppwrite,
 } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
 import { FaSass, FaNpm, FaGitlab } from "react-icons/fa";
@@ -56,6 +58,14 @@ const icons = [
     icon: Antd,
     options: {
       color: "#0170FE",
+      size: "100px",
+    },
+  },
+  {
+    name: "Appwrite",
+    icon: SiAppwrite,
+    options: {
+      color: "#FD366E",
       size: "100px",
     },
   },
@@ -375,6 +385,14 @@ const icons = [
     icon: ScrollReveal,
     options: {
       color: "#e31d65",
+      size: "100px",
+    },
+  },
+  {
+    name: "Shadcn",
+    icon: SiShadcnui,
+    options: {
+      color: "#000000",
       size: "100px",
     },
   },
