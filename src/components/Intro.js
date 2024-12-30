@@ -163,7 +163,11 @@ const Intro = () => {
       transition={{ type: "spring", duration: 2, delay: 1 }}
     >
       <SubBox>
-        <Text>
+        <Text
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 2 }}
+        >
           <h1>Hello,</h1>
           <h3>I'm Shubhang</h3>
           <h5>You Can Call me Fazevennom!</h5>
