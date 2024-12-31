@@ -82,7 +82,7 @@ export const Work = [
     githubUrl: "https://github.com/shubhanggupta2000/firebase-ecommerce",
     hostlink: "https://firebase-ecommerce-fazevennom.vercel.app/",
     imagePath:
-      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1717386324/ebharat.png",
+      "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1735625694/Ebharat.png",
   },
   {
     index: 6,
