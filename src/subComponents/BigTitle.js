@@ -9,6 +9,7 @@ const Text = styled.h1`
   color: ${(props) => `rgba(${props.theme.textRgba},0.1)`};
   font-size: calc(5rem + 5vw);
   z-index: 0;
+  pointer-events: none;
 `;
 
 const BigTitle = (props) => {
