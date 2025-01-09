@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
-import { Github, Twitter, Linkedin, Medium } from "../components/AllSvgs";
+import { Github, Linkedin, Medium, LeetCode } from "../components/AllSvgs";
 import { DarkTheme } from "../components/Themes";
 
 const Icons = styled.div`
@@ -75,9 +75,9 @@ const SocialIcons = (props) => {
           style={{ color: "inherit" }}
           target="_blank"
           rel="noreferrer"
-          href="https://twitter.com/ShubhangGupta13"
+          href="https://leetcode.com/u/Shubhang_Gupta/"
         >
-          <Twitter
+          <LeetCode
             width={25}
             height={25}
             fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}

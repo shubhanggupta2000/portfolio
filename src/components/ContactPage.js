@@ -34,6 +34,7 @@ import {
 } from "react-icons/bs";
 import { FaSquareXTwitter, FaMedium, FaQuora } from "react-icons/fa6";
 import MapComponent from "./MapComponent";
+import { SiLeetcode } from "react-icons/si";
 
 const MainBox = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -82,6 +83,7 @@ const Container = styled.div`
 const socialMediaIcons = [
   { label: "GitHub", icon: <BsGithub size="28px" />, platform: "github" },
   { label: "LinkedIn", icon: <BsLinkedin size="28px" />, platform: "linkedin" },
+  { label: "Leetcode", icon: <SiLeetcode size="28px" />, platform: "leetcode" },
   { label: "Medium", icon: <FaMedium size="28px" />, platform: "medium" },
   {
     label: "Twitter",
@@ -101,6 +103,7 @@ const ContactPage = () => {
   const socialMediaLinks = {
     github: "https://github.com/shubhanggupta2000",
     linkedin: "https://www.linkedin.com/in/gupta-shubhang/",
+    leetcode: "https://leetcode.com/u/Shubhang_Gupta/",
     medium: "https://medium.com/@guptashubhang2000",
     twitter: "https://twitter.com/ShubhangGupta13",
     quora: "https://www.quora.com/profile/Shubhang-Gupta-31",
