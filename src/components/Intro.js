@@ -170,7 +170,7 @@ const Intro = () => {
         >
           <h1>Hello,</h1>
           <h3>I'm Shubhang</h3>
-          <h5>You Can Call me Fazevennom!</h5>
+          <h5>You can call me fazevennom!</h5>
           <h6>I specialize in designing and developing stunning websites.</h6>
         </Text>
       </SubBox>

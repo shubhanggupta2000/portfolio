@@ -245,7 +245,7 @@ const Main = () => {
                   fill="currentColor"
                 />
               )}
-              <span>click here</span>
+              <span>click me</span>
             </Center>
 
             {mq ? (
