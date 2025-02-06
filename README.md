@@ -18,7 +18,6 @@ Enjoy exploring and customizing this stunning portfolio website built with React
 
 - [ ] Skillpage responsiveness
 - [ ] Smooth page transitions
-- [ ] Contact page improvement
 - [ ] Dynamic location on map
 
 # Glimpse
