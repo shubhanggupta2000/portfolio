@@ -18,7 +18,7 @@ Enjoy exploring and customizing this stunning portfolio website built with React
 
 - [ ] Skillpage responsiveness
 - [ ] Smooth page transitions
-- [ ] Blog opening in the portfolio website only
+- [ ] Contact page improvement
 
 # Glimpse
 
