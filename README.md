@@ -4,17 +4,7 @@
 
 ## [Live Here!](https://www.guptashubhang.tech/)
 
-This repository contains the code for my personal portfolio website built with React.JS, Styled-Components, and Framer-Motion. The website features beautiful animations and many more things.
-
-## Getting Started
-
-To run this project locally, follow these steps:
-
-1. Clone the repository.
-2. Install the dependencies using `npm install`.
-3. Start the development server with `npm start`.
-
-Enjoy exploring and customizing this stunning portfolio website built with React JS, Styled-Components, and Framer Motion!
+This repository contains the code for my personal portfolio website built with React.JS, Styled-Components, and Framer-Motion.
 
 ## Todo
 
