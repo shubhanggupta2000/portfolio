@@ -321,7 +321,7 @@ const Main = () => {
             )}
 
             <Resume
-              to="https://drive.google.com/file/d/1I26SBmm31dNpKZMEYGabf-avhOb7lW7b/view?usp=sharing"
+              to="https://drive.google.com/file/d/1YwAU-1HZIaAzs7W_N99sdXw9ev9oEr7i/view?usp=drive_link"
               target="_blank"
               $click={click}
             >

@@ -41,6 +41,27 @@ const Left = styled.div`
   align-items: center;
   text-align: center;
 
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5em;
+    @media (max-width: 900px) {
+      font-size: 1.5rem;
+    }
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    @media (max-width: 900px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 600px) {
+      font-size: 0.7rem;
+    }
+  }
+
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -59,10 +80,22 @@ const Button = styled.button`
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, font-size 0.2s, padding 0.2s;
 
   &:hover {
     background-color: black;
     color: white;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 `;
 
@@ -82,6 +115,27 @@ const TechStackItem = styled.div`
   color: black;
   border-radius: 5px;
   padding: 5px 10px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    // width: 2.5rem;
+    // height: auto;
+    margin: 0 2px;
+    transition: width 0.2s;
+  }
+
+  @media (max-width: 900px) {
+    svg {
+      width: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    svg {
+      width: 1.5rem;
+    }
+  }
 `;
 
 const Card = (props) => {
