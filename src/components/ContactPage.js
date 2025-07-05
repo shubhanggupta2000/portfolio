@@ -176,7 +176,7 @@ const ContactPage = () => {
                                   <MdLocationOn color="#000000" size="20px" />
                                 }
                               >
-                                Gwalior, India
+                                Hyderabad, India
                               </Button>
                             </VStack>
                           </Box>
