@@ -16,9 +16,11 @@ const BigTitle = lazy(() => import("../subComponents/BigTitle"));
 const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 `;
 
 const float = keyframes`
@@ -54,14 +56,25 @@ const Main = styled(motion.div)`
 
   position: absolute;
   left: calc(5rem + 5vw);
-  top: 13rem;
+  top: 15%;
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
+
+  ${mediaQueries(60)`
+    width: 70vw;
+    left: 10%;
+    top: 20%;
+    padding: 1.5rem;
+  `}
+
+  @media (max-width: 960px) and (min-width: 600px) {
+    width: 55vw;
+  }
 
   ${mediaQueries(40)`
     width: 60vw;
     top: 50%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
   `}
 
@@ -108,9 +121,9 @@ const AboutPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
           >
-            I'm a software developer based in India with a passion for
-            crafting user-centric websites. My expertise covers the entire
-            spectrum of web-dev, particularly within the frontend domain.
+            I'm a software developer based in India with a passion for crafting
+            user-centric websites. My expertise covers the entire spectrum of
+            web-dev, particularly within the frontend domain.
             <br /> <br />
             I'm eager to collaborate with opportunities that align with my
             skills and vision. When I'm not immersed in the digital world, I
