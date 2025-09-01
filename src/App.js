@@ -6,6 +6,7 @@ import GlobalStyle from "./globalStyles";
 import { Suspense, lazy } from "react";
 import Loading from "./subComponents/Loading";
 import BlogPost from "./components/BlogPost";
+import PageTransition from "./subComponents/pageTransition";
 
 // Components (using lazy loading)
 const Main = lazy(() => import("./components/Main"));
@@ -23,60 +24,53 @@ function App() {
         <Suspense fallback={<Loading />}>
           <AnimatePresence mode="wait">
             <Routes>
-              <Route
-                path="/"
-                element={
-                  <Suspense fallback={<div>Loading...</div>}>
-                    <Main />
-                  </Suspense>
-                }
-              />
+              <Route path="/" element={<Main />} />
               <Route
                 path="/about"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <PageTransition direction="bottom">
                     <AboutPage />
-                  </Suspense>
+                  </PageTransition>
                 }
               />
               <Route
                 path="/contact"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <PageTransition direction="top">
                     <ContactPage />
-                  </Suspense>
+                  </PageTransition>
                 }
               />
               <Route
                 path="/blog"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <PageTransition direction="right">
                     <BlogPage />
-                  </Suspense>
+                  </PageTransition>
                 }
               />
               <Route
                 path="/blog/:slug"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <PageTransition direction="right">
                     <BlogPost />
-                  </Suspense>
+                  </PageTransition>
                 }
               />{" "}
               <Route
                 path="/work"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <PageTransition direction="left">
                     <WorkPage />
-                  </Suspense>
+                  </PageTransition>
                 }
               />
               <Route
                 path="/skills"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <PageTransition direction="bottom">
                     <MySkillsPage />
-                  </Suspense>
+                  </PageTransition>
                 }
               />
               <Route path="*" element={<Main />} />

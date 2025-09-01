@@ -9,7 +9,7 @@ const LazyDiv = chakra(motion.div, {
 
 const Section = ({ children, delay = 0 }) => (
   <LazyDiv
-    initial={{ y: 10, opacity: 0 }}
+    initial={{ y: 10, opacity: 0 }}I
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.8, delay }}
     mb={6}

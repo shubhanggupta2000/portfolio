@@ -207,7 +207,7 @@ const ContactPage = () => {
                         <Box borderRadius="lg">
                           <Box m={8} color="#0B0E3F">
                             <VStack spacing={5} alignItems="flex-start">
-                              <FormControl id="name">
+                              <FormControl id="contact-name">
                                 <FormLabel>Your Name</FormLabel>
                                 <InputGroup>
                                   <InputLeftElement>
@@ -221,10 +221,11 @@ const ContactPage = () => {
                                     borderBottom="2px solid black"
                                     outline="none"
                                     paddingLeft="1.1rem"
+                                    autoComplete="name"
                                   />
                                 </InputGroup>
                               </FormControl>
-                              <FormControl id="name">
+                              <FormControl id="contact-email">
                                 <FormLabel>Mail</FormLabel>
                                 <InputGroup>
                                   <InputLeftElement>
@@ -238,10 +239,11 @@ const ContactPage = () => {
                                     borderBottom="2px solid black"
                                     outline="none"
                                     paddingLeft="1.1rem"
+                                    autoComplete="email"
                                   />
                                 </InputGroup>
                               </FormControl>
-                              <FormControl id="name">
+                              <FormControl id="contact-message">
                                 <FormLabel>Message</FormLabel>
                                 <Textarea
                                   border="none"
@@ -253,6 +255,7 @@ const ContactPage = () => {
                                     borderBottom: "2px solid black",
                                   }}
                                   placeholder="write your message..."
+                                  autoComplete="off"
                                 />
                               </FormControl>
                               <FormControl id="name" float="right">
