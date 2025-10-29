@@ -2,7 +2,7 @@
 
 ![1](public/Photos/Heading.png)
 
-## [Live Here!](https://www.guptashubhang.tech/)
+## [Live Here!](https://guptashubhang.vercel.app/)
 
 This repository contains the code for my personal portfolio website built with React.JS, Styled-Components, and Framer-Motion.
 

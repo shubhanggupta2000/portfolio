@@ -27,7 +27,7 @@ export const Work = [
       "Typescript",
     ]),
     githubUrl: "https://github.com/shubhanggupta2000/fazeblog",
-    hostlink: "https://blog.guptashubhang.tech/",
+    hostlink: "https://fazeblog.vercel.app/",
     imagePath:
       "https://res.cloudinary.com/ddwqxi6zp/image/upload/v1749313922/fazeblog.png",
   },
