@@ -24,7 +24,7 @@ const Logo = styled.h1`
 const LogoComponent = (props) => {
   return (
     <Link to="/">
-      <Logo color={props.theme}>SG</Logo>;
+      <Logo color={props.theme}>SG</Logo>
     </Link>
   );
 };

@@ -121,9 +121,9 @@ const AboutPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
           >
-            I'm a software developer based in India with a passion for crafting
+            I'm a software engineer based in India with a passion for crafting
             user-centric websites. My expertise covers the entire spectrum of
-            web-dev, particularly within the frontend domain.
+            web-dev, particularly within the backend domain.
             <br /> <br />
             I'm eager to collaborate with opportunities that align with my
             skills and vision. When I'm not immersed in the digital world, I
